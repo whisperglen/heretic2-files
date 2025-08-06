@@ -5,19 +5,19 @@ As an early 3D engine, idTech2 (Quake2) is doing all it can to draw as few polyg
 - using frustum culling (skip triangles not in front of the camera)
 - and BSP culling (hides triangles not visible from the PC's current position, even if those tris are THE other side of an object just in front of us; say hello to unstable hashes).
 
-Since it's already dealing with few triangles, it was not a concern that each drawcall pushes about 2-3 triagles. This is ok in the begining, but it starts to get alot worse when we start disabling culling, and in Heretic, after drawing BSP hidden faces, disabling frustum culling for both brushes and props, Remix was drawing with an unplayable 15-25fps. We're now talking about tens of thousands of drawcalls. BUT, We want more! So ideally we'd put as many related vertex data in a drawcall reducing that number.
+Since it's already dealing with few triangles, it was not a concern that each drawcall pushes about 2-3 triangles. This is ok in the begining, but it starts to get alot worse when we start disabling culling, and in Heretic, after drawing BSP hidden faces, disabling frustum culling for both brushes and props, Remix was drawing with an unplayable 15-25fps. We're now talking about tens of thousands of drawcalls. BUT, We want more! So ideally we'd put as many related vertex data in a drawcall reducing that number.
 
 ## Gameplan
 There are two points of interest in the rendering code: drawing brushes, and drawing props, both of which usually have their own rendering path. For Quake2, Heretic2 (and Anachronox) we have:
 - RecursiveWorldNode which explores the BSP tree and draws brushes: the geometry clusters are rather random when exploring the tree (i.e. they do not draw complete objects, rather a small part here, another there), so there are multiple texture switches due to this, not to mention that one cluster generates several drawcalls. idTech3, on the other hand, sorts all clusters according to assigned texture, and puts all vertices together in one big DrawCall per texture. If you brain goes 'Wait just 1sec..' it'd be right, Remix replacement for meshes just got complicated, but, remember the comment about random order and hidden surface removal? We need all the data from all clusters to obtain complete objects and prevent light leaking. BSP clusters are only a hindrance at this point. There might be a way to split the brushes again, based on proximity, i.e. have contiguous brushes, then cull the far away ones (but this is another topic for another day).
-- DrawModel (GL_DrawFlexFrameLerp) is being called for each prop or PC/NPC; In Q2 there is one texture assigned per model, in H2 there are ~2 for a character so we would have one draw loop for each texture at least (in reality there is one loop for head, torso, hands, legs; then each loop has many drawcalls depending on the no of triangles). That's too many drawcalls, and I'd want to have one drawcall per drawloop.
+- DrawModel (GL_DrawFlexFrameLerp) is being called for each prop or PC/NPC; In Q2 there is one texture assigned per model, in H2 there are ~2 for a character so we would have one draw loop for each texture at least (in reality there is one loop for head, torso, hands, legs; then each loop has many drawcalls depending on the no of triangles). That's too many drawcalls, and I'd want to have one drawcall per loop.
 
 My plan was the following:
 1. replace RecursiveWorldNode in it's entirety, so we have a proper editable playground for brushes; first we'd draw hidden faces (no cull for BSP), we can disable lightmaps at this point (disable multitexture and don't supply 2nd TexCoords sample), we can skip alpha surfaces if they are hidden (they are independent and shouldn't affect hashes) etc
-2. for DrawModel, I only wanted to replace the inner draw loop: let the game assign textures and blending mode, we'd only put all vertices in a big draw buffer and emit one drawcall.
+2. for DrawModel, I only wanted to replace the inner draw loop: let the game assign textures and blending mode, I'd only put all vertices in a big draw buffer and emit one drawcall.
 3. these changes I want to do in C(C++) because there will be bugs and debugging, and there will be further changes since I keep discovering special cases; basically I want to enjoy my time while working on this, and also keep my hair.
 
-Sneakpeak: Before and After<br>
+Sneakpeek: Before and After<br>
 ![](./pics/before1.png)
 ![](./pics/after1.png)
 
@@ -117,10 +117,12 @@ if ( (currententity[0x30] & 8) != 0 ) //check if FULLBRIGHT
     vb->clr.all = 0xffffffff;
     render_flags = 0;
 }
-
-//HOMEWORK: what if we need to access int fields from currententity ? [^7]
 ```
-![double pointer](./pics/double_pointer.png) [ ABC ] means the value at address ABC <br>
+> [!NOTE]
+> HOMEWORK: what if we need to access int fields from currententity ? [^7]
+
+![double pointer](./pics/double_pointer.png) [ ABC ] means the value at address ABC
+
 Feeling confused? Remember there is always an address, so each time you look at a global in asm ask yourself: is this the address or the value?
 
 ### Optional step: More about global variables
