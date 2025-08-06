@@ -26,15 +26,15 @@ Sneakpeek: Before and After<br>
 > - And the short answer is Strings. To help bughunting, developers place error logs in various locations in the code e.g. "Error/Warnig array index out of bounds". So one searches for a string containing error or warning.<br>
 > - Next, that string gets passed to a LogPrint (LogError/LogWarn) function. Label the function address, and find all the pieces of code that call it (xrefs). The beautiful part: these error messages usually contain the name of the function they are in, so we can label new functions.<br>
 > - One other thing that is human readable in idtech are console variables (or cvars). An example is r_nocull; doing a search for it brings us to the cvar initialisation: Cvar_Get. This function returns a pointer (used by the game to verify it's value, changed status etc), which again can be labelled with the cvar name, and now you'll find references to that pointer all over the code.<br>
-> - Remeber the Six degrees of separation: you will not search for the needle in haystack: search for related things (via xrefs), and each one you find brings you closer to your target: Projection matrix uses FOV and screen size. Those should be near PC world location, and that location with the FOV is used to calculate the frustum. Camera and World matrix gets passed to SetTransform(DX9)/LoadMatrixf(OGL) etc.<br>
+> - Remember the Six degrees of separation: you will not search for the needle in haystack, instead search for related things (via xrefs), and each one you find brings you closer to your target. Projection matrix uses FOV and screen size. Those should be near PC world location, and that location with the FOV is used to calculate the frustum. Camera and World matrix gets passed to SetTransform(DX9)/LoadMatrixf(OGL) etc.<br>
 
 > [!TIP]
 > ### Function Calling Conventions [^2]
 > - This affects how parameters are handed-over to a function to be executed.<br>
 > - All C functions use the _cdecl convention by default, meaning all arguments starting with the last, upto the first, are pushed onto the stack (and the stack 'grows' with each argument pushed). The function is then called with the CALL opcode, and to finish the stack must be brought back to it's size before the call, by removing the no. of bytes used for arguments (an int is 32bits, therefore 4 bytes), that's the stack cleanup.<br>
-> - Windows API (Win32) uses the _stdcall convention, which is very similar, with the exception that the stack cleanup must be performed by the function that receives the parameters -this means that when you replace a _stdcall function, you must match the number of argumets precisely ortherwise you get crashes.<br>
+> - Windows API (Win32) uses the _stdcall convention, which is very similar, with the exception that the stack cleanup must be performed by the function that receives the parameters -this means that when you replace a _stdcall function, you must match the number of arguments precisely ortherwise you get crashes.<br>
 > - The last convention is the wild one: the _fastcall convention (let's call it _usercall since I've seen the rules broken, *Intel Compiler, cough*): some arguments are stored in registers, others on the stack, but usually which arg goes where is consistent throughout the binary. Use the debugger and see which args go into which registers. Normally I'd want to bypass this: create a small 'naked' function that pushes those registers on stack, and then calls your _cdecl function: readability is more important.[^6]
-> - One more 'weird' thing, the stack works backwards: like a reverse loading bar filling from the right; when argumets get pushed, it goes from 100 to 96, 92. Therefore stack cleanup adds the number of bytes consumed, bringing it to 100 again.
+> - One more 'weird' thing, the stack works backwards: like a reverse loading bar filling from the right; when arguments get pushed, it goes from 100 to 96, 92. Therefore stack cleanup adds the number of bytes consumed, bringing it to 100 again.
 
 
 > [!IMPORTANT]
@@ -118,10 +118,9 @@ if ( (currententity[0x30] & 8) != 0 ) //check if FULLBRIGHT
     render_flags = 0;
 }
 ```
+![double pointer](./pics/double_pointer.png) [ ABC ] means the value at address ABC
 > [!NOTE]
 > HOMEWORK: what if we need to access int fields from currententity ? [^7]
-
-![double pointer](./pics/double_pointer.png) [ ABC ] means the value at address ABC
 
 Feeling confused? Remember there is always an address, so each time you look at a global in asm ask yourself: is this the address or the value?
 
@@ -136,13 +135,13 @@ if ( /*r_newrefdef.areabits*/r_newrefdef_areabits )
 }
 ```
 
-*Job done!* That, to me, was really cool: Unlimited Power! Wrote C-code and executed it, called other functions present in the binary, and accessed globals, all this without requiring lib to provide these missing symbols.
+**Job done!** That, to me, was really cool: Unlimited Power! Wrote C-code and executed it, called other functions present in the binary, and accessed globals, all this without requiring lib to provide these missing symbols.
 
 ## Task No.2: DrawModel
 > [!NOTE]
 > When modifying DrawModel you will learn about: register clobbering, and calling a function by absolute address.
 
-Great, let's do some [Refactor: Extract Method](https://learn.microsoft.com/en-us/visualstudio/ide/reference/extract-method), but with asm. With this method I don't have to figure out the function and global addresses I needed for RecursiveWorldNode, or figure out many other operations done by the game (choosing textures, blending modes). You might be able to use this trick in case you decided to do some binary patching i.e. overwriting some asm, but you do not have enough space for the overwrite; call a new function and implement all the extra code there.<br>
+Great, let's do some [Refactor: Extract Method](https://learn.microsoft.com/en-us/visualstudio/ide/reference/extract-method), but with asm. With this method I don't have to figure out ALL the function and global addresses I needed for RecursiveWorldNode, or figure out many other operations done by the game (choosing textures, blending modes). You might be able to use this trick in case you decided to do some binary patching i.e. overwriting some asm, but you do not have enough space for the overwrite; call a new function and implement all the extra code there.<br>
 But, this change is tricky and has more things that can go wrong; it needs more attention than the other method.
 
 > [!TIP]
@@ -157,7 +156,7 @@ But, this change is tricky and has more things that can go wrong; it needs more 
     - to push arguments on stack: these are usually local variables that I need access to in my C function, but they can also be globals
     - perform the call
     - do stack cleanup
-    - jump over unnecessary code (there is unused asm code is the old function that should be skipped over)
+    - jump over unnecessary code (there is unused asm code in the old function that should be skipped over)
 2. Then at runtime, I want to memcopy the generated bytecode at the desired location.
 
 ### Step one: The ASM adapter
@@ -252,7 +251,7 @@ if ( val == 0xc7832f8b ) //doublechecking we have the right offset
 }
 ```
 ## Closing Words
-I started to modify original Quake2 source for Remix, because I hoped I could port it to Heretic2. I had no idea if it was possible. It was a long shot, that, at least was clear. But little by little, ideas popped-up. I tried them, debugged, made them work. Did I mention this old game crashes when loading a savegame -rough, thats's more things for me to fix. Saving grace is that there are sources (Q2, some RE projects on github, and H2 gamecode was open-sourced).<br>
+I started to modify original Quake2 source for Remix, because I hoped I could port it to Heretic2. I had no idea if it was possible. It was a long shot, that at least was clear. But little by little, ideas popped-up. I tried them, debugged, made them work. Did I mention this old game crashes when loading a savegame -rough, thats's more things for me to fix. Saving grace is that there are sources (Q2, some RE projects on github, and H2 gamecode was open-sourced).<br>
 In the end I'm pretty satisfied with how it went, I was even able to drop stuff from the drawcall, like the lightmaps, change vertex colors, add normals for vertexes.<br>
 Not to mention, that with Detours I'm intercepting LoadMap calls (I could have specific rtx.conf setting for each map, like RTCW), and RenderFrame calls (turn dynamic light data for special effects into RemixLights).<br>
 Hopefully this gives you some ideeas of your own!<br>
