@@ -3,17 +3,17 @@
 ## Context
 As an early 3D engine, idTech2 (Quake2) is doing all it can to draw as few polygons as possible on-screen:
 - using frustum culling (skip triangles not in front of the camera)
-- and BSP culling (hides triangles not visible from the PC's current position, even if those tris are on the other side of a door in front of us; say hello to unstable hashes).
+- and BSP culling (hides triangles not visible from the PC's current position, even if those tris are THE other side of an object just in front of us; say hello to unstable hashes).
 
 Since it's already dealing with few triangles, it was not a concern that each drawcall pushes about 2-3 triagles. This is ok in the begining, but it starts to get alot worse when we start disabling culling, and in Heretic, after drawing BSP hidden faces, disabling frustum culling for both brushes and props, Remix was drawing with an unplayable 15-25fps. We're now talking about tens of thousands of drawcalls. BUT, We want more! So ideally we'd put as many related vertex data in a drawcall reducing that number.
 
 ## Gameplan
 There are two points of interest in the rendering code: drawing brushes, and drawing props, both of which usually have their own rendering path. For Quake2, Heretic2 (and Anachronox) we have:
-- RecursiveWorldNode which explores the BSP tree and draws brushes: the geometry clusters are rather random when exploring the tree (i.e. they do not draw complete objects, rather a small part here, another there), so there are multiple texture switches due to this, not to mention that one cluster generates several drawcalls. idTech3, on the other hand, sorts all clusters according to assigned texture, and puts all vertices together in one big DrawCall per texture. If you brain goes 'Wait just 1sec..' it'd be right, Remix replacement for meshes just got complicated, but, remember the comment about random order and hidden surface removal? We need all the data from all clusters to obtaing complete objects and prevent light leaking. BSP clusters are only a hindrance at this point. There might be a way to split the brushes again, based on proximity, i.e. have contiguous brushes, then cull the far away ones (but this is another topic for another day).
+- RecursiveWorldNode which explores the BSP tree and draws brushes: the geometry clusters are rather random when exploring the tree (i.e. they do not draw complete objects, rather a small part here, another there), so there are multiple texture switches due to this, not to mention that one cluster generates several drawcalls. idTech3, on the other hand, sorts all clusters according to assigned texture, and puts all vertices together in one big DrawCall per texture. If you brain goes 'Wait just 1sec..' it'd be right, Remix replacement for meshes just got complicated, but, remember the comment about random order and hidden surface removal? We need all the data from all clusters to obtain complete objects and prevent light leaking. BSP clusters are only a hindrance at this point. There might be a way to split the brushes again, based on proximity, i.e. have contiguous brushes, then cull the far away ones (but this is another topic for another day).
 - DrawModel (GL_DrawFlexFrameLerp) is being called for each prop or PC/NPC; In Q2 there is one texture assigned per model, in H2 there are ~2 for a character so we would have one draw loop for each texture at least (in reality there is one loop for head, torso, hands, legs; then each loop has many drawcalls depending on the no of triangles). That's too many drawcalls, and I'd want to have one drawcall per drawloop.
 
 My plan was the following:
-1. replace RecursiveWorldNode in it's entirety, so we have a proper editable playground for brushes; first we'd draw hidden faces (no cull), we can disable lightmaps at this point (disable multitexture and don't supply 2nd TexCoords sample), we can skip alpha surfaces if they are hidden (they are independent and shouldn't affect hashes) etc
+1. replace RecursiveWorldNode in it's entirety, so we have a proper editable playground for brushes; first we'd draw hidden faces (no cull for BSP), we can disable lightmaps at this point (disable multitexture and don't supply 2nd TexCoords sample), we can skip alpha surfaces if they are hidden (they are independent and shouldn't affect hashes) etc
 2. for DrawModel, I only wanted to replace the inner draw loop: let the game assign textures and blending mode, we'd only put all vertices in a big draw buffer and emit one drawcall.
 3. these changes I want to do in C(C++) because there will be bugs and debugging, and there will be further changes since I keep discovering special cases; basically I want to enjoy my time while working on this, and also keep my hair.
 
@@ -51,10 +51,10 @@ Now you could do it the quick and dirty way: take that hex number in ghidra, cas
 ![How to get the base address](./pics/base_address.png)<br>
 Here I want a dll base address, but if I wanted the main executable, I would pass in NULL as a modulename. The base address is in ref_gl_data.lpBaseOfDll. Add 0xc760 to ref_gl_data.lpBaseOfDll and we have a function pointer to R_RecursiveWorldNode (see an actual example later). However, it's not R_RecursiveWorldNode that I want to call.
 
-### First step: I want to go to the code that calls that function, and modify it to call my newly implemented C-code: _h2_intercept_RecursiveWorldNode_.
+### First step: I want to go to the code that calls RecursiveWorldNode, and modify it to call my newly implemented C-code: _h2_intercept_RecursiveWorldNode_.
 
 ![Calling RecursiveWorldNode](./pics/call_rwn.png)<br>
-We're interested in this line: CALL R_RecursiveWorldNode. Make a note of it's offset (0xcbdd). There are 5 bytes here: one byte for the CALL asm-op, and four bytes for a relative address (how many bytes to jump forward or backward, starting from the next address following our CALL asm-op. Basically the CPU takes 0x109ecbe2 (next asm-op) and adds 0xffff67b7, and that is the next address to be executed. But wait, bytes are reversed? Yes, this is what **LittleEndian** means: numeric values or addresses are reversed; if you have a string of `char s[] = "1234"` it is stored in memory as 31 32 33 34 (hex), but if you have a numeric value e.g. a `short m = 5` it is stored as 05 00, or an `int n = 6` it is stored as 06 00 00 00. If you think about it, this is how we do additions and multiplications, the last digit is always used first.
+We're interested in this line: CALL R_RecursiveWorldNode. Make a note of it's offset (0xcbdd). There are 5 bytes here: one byte for the CALL asm-op, and four bytes for a relative address (how many bytes to jump forward or backward, starting from the next address following our CALL asm-op. Basically the CPU takes 0x109ecbe2 (next asm-op) and adds 0xfffffb7e, and that is the next address to be executed. But wait, bytes are reversed? Yes, this is what **LittleEndian** means: numeric values or addresses are reversed; if you have a string of `char s[] = "1234"` it is stored in memory as 31 32 33 34 (hex), but if you have a numeric value e.g. a `short m = 5` it is stored as 05 00, or an `int n = 6` it is stored as 06 00 00 00. If you think about it, this is how we do additions and multiplications, the last digit is always used first.
 
 ``` c++
 byte *code;
@@ -96,9 +96,10 @@ Variables on the other hand, need a bit of explanation. In C we have variables l
 static int* dp_r_framecount = (int*)((intptr_t)0x5fd20 + (intptr_t)ref_gl_data.lpBaseOfDll);
 #define r_framecount (*dp_r_framecount)
 ```
-![int variable](./pics/var_int.png) [ ABC ] means the value at address ABC <br>
+![int variable](./pics/var_int.png)<br>
+[ ABC ] means the value at address ABC<br>
 
-2. Arrays of values are easier to declare and use, since they are pointers already. But you need to spot them first in the assembly; hint: they have adjacent memory addresses.
+2. Arrays of values are easier to declare and use, since they are pointers already. But you need to spot them first in the assembly; HINT: they have adjacent memory addresses.
 ``` c++
 static float* modelorg;// = 0x5fb40;
 ```
@@ -109,7 +110,7 @@ static float* modelorg;// = 0x5fb40;
 //this is a global pointer that holds the address of an element in an array of structs (the entities)
 byte **dp_currententity;// = 0x5fe7c
 #define currententity (*dp_currententity)
-// currententity[0x30] is currententity->flags (a byte), but is was easier to copy
+// currententity[0x30] is currententity->flags (a byte), but it was easier to copy
 //  the array subscript from ghidra, than declaring the struct
 if ( (currententity[0x30] & 8) != 0 ) //check if FULLBRIGHT
 {
@@ -211,7 +212,7 @@ code = PTR_FROM_OFFSET( byte*, 0x28ab );
 memcpy( &val, &code[0], 4 );
 if ( val == 0xc7832f8b ) //doublechecking we have the right offset
 {
-     //Make memory writeable, 471 from original code needs to be replaced or skipped
+     //Make memory writeable, 471 bytes from original code needs to be replaced or skipped
     if ( hook_unprotect( code, 471, &restore ) )
     {
         //copy our asm bridge code over
@@ -249,9 +250,9 @@ if ( val == 0xc7832f8b ) //doublechecking we have the right offset
 }
 ```
 ## Closing Words
-I started to modify original Quake2 source for Remix, because I hoped I could port it to Heretic2. I had no idea if it was possible. It was a long shot, that, at least was clear. But little by little, ideas popped-up. I tried them, debugged, made them work. Did I mention the game crashes when loading a savegame -rough. Saving grace is that there are sources (Q2, some RE projects on github, and H2 gamecode was open-sourced).<br>
+I started to modify original Quake2 source for Remix, because I hoped I could port it to Heretic2. I had no idea if it was possible. It was a long shot, that, at least was clear. But little by little, ideas popped-up. I tried them, debugged, made them work. Did I mention this old game crashes when loading a savegame -rough, thats's more things for me to fix. Saving grace is that there are sources (Q2, some RE projects on github, and H2 gamecode was open-sourced).<br>
 In the end I'm pretty satisfied with how it went, I was even able to drop stuff from the drawcall, like the lightmaps, change vertex colors, add normals for vertexes.<br>
-Not to mention, that with Detours I'm intercepting LoadMap calls (I could have specific rtx.conf setting for each map, like RTCW), and RenderFrame (turn dynamic light data for special effects into RemixLights).<br>
+Not to mention, that with Detours I'm intercepting LoadMap calls (I could have specific rtx.conf setting for each map, like RTCW), and RenderFrame calls (turn dynamic light data for special effects into RemixLights).<br>
 Hopefully this gives you some ideeas of your own!<br>
 
 ## References
