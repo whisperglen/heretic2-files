@@ -5,12 +5,12 @@ As an early 3D engine, idTech2 (Quake2) is doing all it can to draw as few polyg
 - using frustum culling (skip triangles not in front of the camera)
 - and BSP culling (hides triangles not visible from the PC's current position, even if those tris are THE other side of an object just in front of us; say hello to unstable hashes).
 
-Since it's already dealing with few triangles, it was not a concern that each drawcall pushes about 2-3 triangles. This is ok in the begining, but it starts to get alot worse when we start disabling culling, and in Heretic, after drawing BSP hidden faces, disabling frustum culling for both brushes and props, Remix was drawing with an unplayable 15-25fps. We're now talking about tens of thousands of drawcalls. BUT, We want more! So ideally we'd put as many related vertex data in a drawcall reducing that number.
+Since it's already dealing with few triangles, it was not a concern that each drawcall pushes about 2-3 triangles. This is ok in the beginning, but it starts to get a lot worse when we start disabling culling, and in Heretic, after drawing BSP hidden faces, disabling frustum culling for both brushes and props, Remix was drawing with an unplayable 15-25fps. We're now talking about tens of thousands of drawcalls. BUT, We want more! So ideally we'd put as many related vertex data in a drawcall reducing that number.
 
 ## Gameplan
-There are two points of interest in the rendering code: drawing brushes, and drawing props, both of which usually have their own rendering path. For Quake2, Heretic2 (and Anachronox) we have:
+There are two points of interest in the rendering code: drawing brushes, and drawing props, both of which usually have their own rendering path. For Quake2, Heretic2, Anachronox (and probably others) we have:
 - RecursiveWorldNode which explores the BSP tree and draws brushes: the geometry clusters are rather random when exploring the tree (i.e. they do not draw complete objects, rather a small part here, another there), so there are multiple texture switches due to this, not to mention that one cluster generates several drawcalls. idTech3, on the other hand, sorts all clusters according to assigned texture, and puts all vertices together in one big DrawCall per texture. If you brain goes 'Wait just 1sec..' it'd be right, Remix replacement for meshes just got complicated, but, remember the comment about random order and hidden surface removal? We need all the data from all clusters to obtain complete objects and prevent light leaking. BSP clusters are only a hindrance at this point. There might be a way to split the brushes again, based on proximity, i.e. have contiguous brushes, then cull the far away ones (but this is another topic for another day).
-- DrawModel (GL_DrawFlexFrameLerp) is being called for each prop or PC/NPC; In Q2 there is one texture assigned per model, in H2 there are ~2 for a character so we would have one draw loop for each texture at least (in reality there is one loop for head, torso, hands, legs; then each loop has many drawcalls depending on the no of triangles). That's too many drawcalls, and I'd want to have one drawcall per loop.
+- DrawModel (H2: GL_DrawFlexFrameLerp) is being called for each prop or PC/NPC; In Q2 there is one texture assigned per model, in H2 there are ~2 for a character so we would have one draw loop for each texture at least (in reality there is one loop for head, torso, hands, legs; then each loop has many drawcalls depending on the no of triangles). That's too many drawcalls, and I'd want to have one drawcall per loop.
 
 My plan was the following:
 1. replace RecursiveWorldNode in it's entirety, so we have a proper editable playground for brushes; first we'd draw hidden faces (no cull for BSP), we can disable lightmaps at this point (disable multitexture and don't supply 2nd TexCoords sample), we can skip alpha surfaces if they are hidden (they are independent and shouldn't affect hashes) etc
@@ -23,16 +23,16 @@ Sneakpeek: Before and After<br>
 
 > [!TIP]
 > ### How do I even find where the relevant code is in these binaries?
-> - And the short answer is Strings. To help bughunting, developers place error logs in various locations in the code e.g. "Error/Warnig array index out of bounds". So one searches for a string containing error or warning.<br>
+> - And the short answer is Strings. To help bughunting, developers place error logs in various locations in the code e.g. "Error/Warning array index out of bounds". So one searches for a string containing error or warning.<br>
 > - Next, that string gets passed to a LogPrint (LogError/LogWarn) function. Label the function address, and find all the pieces of code that call it (xrefs). The beautiful part: these error messages usually contain the name of the function they are in, so we can label new functions.<br>
-> - One other thing that is human readable in idtech are console variables (or cvars). An example is r_nocull; doing a search for it brings us to the cvar initialisation: Cvar_Get. This function returns a pointer (used by the game to verify it's value, changed status etc), which again can be labelled with the cvar name, and now you'll find references to that pointer all over the code.<br>
+> - One other thing that is human readable in idtech are console variables (or cvars). An example is r_nocull; doing a search for it brings us to the cvar initialization: Cvar_Get. This function returns a pointer (used by the game to verify it's value, changed status etc), which again can be labelled with the cvar name, and now you'll find references to that pointer all over the code.<br>
 > - Remember the Six degrees of separation: you will not search for the needle in haystack, instead search for related things (via xrefs), and each one you find brings you closer to your target. Projection matrix uses FOV and screen size. Those should be near PC world location, and that location with the FOV is used to calculate the frustum. Camera and World matrix gets passed to SetTransform(DX9)/LoadMatrixf(OGL) etc.<br>
 
 > [!TIP]
 > ### Function Calling Conventions [^2]
 > - This affects how parameters are handed-over to a function to be executed.<br>
 > - All C functions use the _cdecl convention by default, meaning all arguments starting with the last, upto the first, are pushed onto the stack (and the stack 'grows' with each argument pushed). The function is then called with the CALL opcode, and to finish the stack must be brought back to it's size before the call, by removing the no. of bytes used for arguments (an int is 32bits, therefore 4 bytes), that's the stack cleanup.<br>
-> - Windows API (Win32) uses the _stdcall convention, which is very similar, with the exception that the stack cleanup must be performed by the function that receives the parameters -this means that when you replace a _stdcall function, you must match the number of arguments precisely ortherwise you get crashes.<br>
+> - Windows API (Win32) uses the _stdcall convention, which is very similar, with the exception that the stack cleanup must be performed by the function that receives the parameters -this means that when you replace a _stdcall function, you must match the number of arguments precisely otherwise you get crashes.<br>
 > - The last convention is the wild one: the _fastcall convention (let's call it _usercall since I've seen the rules broken, *Intel Compiler, cough*): some arguments are stored in registers, others on the stack, but usually which arg goes where is consistent throughout the binary. Use the debugger and see which args go into which registers. Normally I'd want to bypass this: create a small 'naked' function that pushes those registers on stack, and then calls your _cdecl function: readability is more important.[^6]
 > - One more 'weird' thing, the stack works backwards: like a reverse loading bar filling from the right; when arguments get pushed, it goes from 100 to 96, 92. Therefore stack cleanup adds the number of bytes consumed, bringing it to 100 again.
 
@@ -45,7 +45,7 @@ Sneakpeek: Before and After<br>
 > This function is executed via CALL opcode. In this section we will look at a code snippet to replace the CALL destination with a C-function, see how to call other functions from the binary, how to access global variables, modifying read-only memory, how to get code and data location in memory, and LittleEndian.
 
 ![Seeing the function offset](./pics/func_offset.png)<br>
-Above we can see a function's image base offset in ghidra (same thing for variables). How do we get a pointer to those when we begin our hacking? Windows, via Win32 API, will give us something called the **module base address**, or the starting memory location where the exe or dll is loaded. Add ghidra's image base offset to Windows' base adress, job done.<br>
+Above we can see a function's image base offset in ghidra (same thing for variables). How do we get a pointer to those when we begin our hacking? Windows, via Win32 API, will give us something called the **module base address**, or the starting memory location where the exe or dll is loaded. Add ghidra's image base offset to Windows' base address, job done.<br>
 Now you could do it the quick and dirty way: take that hex number in ghidra, cast it to a pointer and just start using it, however sometimes Windows decides to throw a curveball, and it loads your dll or exe at a different address. This would happen when there is a collision (2 dlls need to be loaded at same address) or when something like ASLR is activated for the executable (see [JK2MV](https://github.com/mvdevs/jk2mv)).
 
 ![How to get the base address](./pics/base_address.png)<br>
@@ -78,7 +78,7 @@ if ( code[0] == 0xe8 && val == 0xfffffb7e )
 }
 ```
 
-Now that we have the offset where we want to plug-in our code (0xcbdd), turn it into a pointer (code), and, just to make sure, we use the pointer to check it actually contains the same bytes we obsered in ghidra (code[0] && val). But we are not really allowed to modify those bytes yet: they are marked as executable code (malware protection), so we must ask Windows to make it writeable (`VirtualProtect`). Once that's done, take the address of our C-code (h2_intercept_RecursiveWorldNode), and subtract from it the memory address following our CALL instruction: &code[5]. The result is copied into &code[1] for the CALL opcode.
+Now that we have the offset where we want to plug-in our code (0xcbdd), turn it into a pointer (code), and, just to make sure, we use the pointer to check it actually contains the same bytes we observed in ghidra (code[0] && val). But we are not really allowed to modify those bytes yet: they are marked as executable code (malware protection), so we must ask Windows to make it writeable (`VirtualProtect`). Once that's done, take the address of our C-code (h2_intercept_RecursiveWorldNode), and subtract from it the memory address following our CALL instruction: &code[5]. The result is copied into &code[1] for the CALL opcode.
 
 ### Second step: Call other functions in the binary
 If you're thinking we're making use of that base address again, you're right: function calls are easy, declare them with the proper C function-pointer syntax and assign the offset + base address:<br>
@@ -148,9 +148,9 @@ But, this change is tricky and has more things that can go wrong; it needs more 
 > ### Register clobbering
 > - We know each function must do work, and that is done using registers, think of them as a board you can write on, and wipe clean.<br>
 > - The board needs to be shared by all functions, but not all functions need the whole board. So there are some rules set in place: when inside a function call, a part of the board is free to be used without restrictions, but when more space is needed, those parts must be written to stack, and restored when the function finishes.<br>
-> - The freely useable registers (clobbered registeres) for Windows x86 are: EAX, ECX, EDX.<br>
+> - The freely useable registers (clobbered registers) for Windows x86 are: EAX, ECX, EDX.<br>
 > - When I want to call a function, and I still need the data in the freely useable registers, I must to save them before the call (I have to guarantee that 'free usage' to the called function). The called function will then take care to restore the rest of the registers.
-> - One more thing, which I did not encounter, is that the [old floating-point stack](https://en.wikibooks.org/wiki/X86_Assembly/Floating_Point) must also be empty before a call. In modern compiled C-code, old FP instructions and registers are not used, they are superseeded by SSE and AVX, so using floating-point in your code might not interfere w/ the old stack. However if crashes start knocking, check if FP stack is to blame [^5]
+> - One more thing, which I did not encounter, is that the [old floating-point stack](https://en.wikibooks.org/wiki/X86_Assembly/Floating_Point) must also be empty before a call. In modern compiled C-code, old FP instructions and registers are not used, they are superseded by SSE and AVX, so using floating-point in your code might not interfere w/ the old stack. However if crashes start knocking, check if FP stack is to blame [^5]
 
 1. In order to call a new C function, I will write an asm adapter in the C/C++ source file:
     - to push arguments on stack: these are usually local variables that I need access to in my C function, but they can also be globals
@@ -202,7 +202,7 @@ static __declspec(naked) void h2_bridge_to_Model_BuildVBuff()
     //  sometimes the code restores them each loop, and you might not have to save them, #YOLO
 }
 ```
-OK, but what asm code should I put in my adaptors? Try to write it in C first, compile & dissassemble it, and check the opcodes. Or use an online compiler that shows asm: [^4]
+OK, but what asm code should I put in my adaptors? Try to write it in C first, compile & disassemble it, and check the opcodes. Or use an online compiler that shows asm: [^4]
 ### Step two: Runtime setup
 Now, at runtime there is a bit of setup to do. This adapter that I wrote, it is smaller in size than the replaced/'Extracted' code, therefore I will have to skip over that unnecessary code with a jump. For that I have placed some NOP markers, which I need to replace with a JMP instruction. Let's see:
 ``` c++
@@ -211,7 +211,7 @@ unsigned long restore;
 //8b 2f 83 c7 this is where the draw loop starts
 code = PTR_FROM_OFFSET( byte*, 0x28ab );
 memcpy( &val, &code[0], 4 );
-if ( val == 0xc7832f8b ) //doublechecking we have the right offset
+if ( val == 0xc7832f8b ) //checking we have the right offset
 {
      //Make memory writeable, 471 bytes from original code needs to be replaced or skipped
     if ( hook_unprotect( code, 471, &restore ) )
@@ -254,7 +254,7 @@ if ( val == 0xc7832f8b ) //doublechecking we have the right offset
 I started to modify original Quake2 source for Remix, because I hoped I could port it to Heretic2. I had no idea if it was possible. It was a long shot, that at least was clear. But little by little, ideas popped-up. I tried them, debugged, made them work. Did I mention this old game crashes when loading a savegame -rough, thats's more things for me to fix. Saving grace is that there are sources (Q2, some RE projects on github, and H2 gamecode was open-sourced).<br>
 In the end I'm pretty satisfied with how it went, I was even able to drop stuff from the drawcall, like the lightmaps, change vertex colors, add normals for vertexes.<br>
 Not to mention, that with Detours I'm intercepting LoadMap calls (I could have specific rtx.conf setting for each map, like RTCW), and RenderFrame calls (turn dynamic light data for special effects into RemixLights).<br>
-Hopefully this gives you some ideeas of your own!<br>
+Hopefully this gives you some ideas of your own!<br>
 
 ## References
 [^1]: Source code: https://github.com/whisperglen/QindieGL/blob/master/idtech3_mixup/h2_refgl.cpp<br>
