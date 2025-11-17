@@ -22,7 +22,7 @@ void ResMngr_DeallocateResource( ResourceManager_t *resource, void *toDeallocate
 }
 ```
 The changes are two lines added after param_2 is read into EAX: test for zero, and jump if true to the end (10952654):<br>
-![Original](./pics/resmgr_dealloc.png) ![Modified](./pics/resmgr_modded1.png)
+![ResMgrDealloc](./pics/resmgr_dealloc.png)
 
 This is how the disassembled code looks:<br>
 ![Dis Dealloc0](./pics/resmgr_dec0.png)
@@ -46,7 +46,7 @@ void SLList_Des(SinglyLinkedList_t* this_ptr)
 }
 ```
 The changes are 3 nops before last call to ResMngr_DeallocateResource (10952704), then 4 lines after the call, where zero is assigned to the three members (1095270f):<br>
-![Original](./pics/sslist_des.png) ![Modified](./pics/sslist_modded1.png)
+![SSListDes](./pics/sslist_des.png)
 
 This is how the disassembled code looks:<br>
 ![Dis ListDes0](./pics/sslist_dec0.png)
