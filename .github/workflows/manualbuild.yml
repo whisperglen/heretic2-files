@@ -40,5 +40,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: heretic2_remix_files
-        path: .\build\*
+        path: .\remixmod\*
         include-hidden-files: true
