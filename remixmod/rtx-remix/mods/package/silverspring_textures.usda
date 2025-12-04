@@ -1,0 +1,2300 @@
+#usda 1.0
+(
+    customLayerData = {
+        string lightspeed_layer_type = "workfile"
+        dictionary omni_layer = {
+            string authoring_layer = "./mod.usda"
+            dictionary locked = {
+                bool "./deps/captures/ssdocks_01.usd" = 1
+            }
+        }
+    }
+    endTimeCode = 40
+    metersPerUnit = 1
+    startTimeCode = 0
+    timeCodesPerSecond = 60
+    upAxis = "Z"
+)
+
+over "RootNode"
+{
+    over "Looks"
+    {
+        over "mat_5D956E813A409C38"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Tiles090_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Tiles090_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Tiles090_1K-PNG_Roughness.r.rtex.dds@
+                custom int inputs:wrap_mode_u = 1
+                custom int inputs:wrap_mode_v = 1
+            }
+        }
+
+        over "mat_91D0D1E340A3C7D1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/flower_scattered_gravel_diff_1k.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/flower_scattered_gravel_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/flower_scattered_gravel_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_186505D7BE2B39A1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_diff_1k.a.rtex.dds@
+                custom float inputs:displace_in = 0.05
+                custom float inputs:displace_out = 0
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_7EAD5764A2BC6A72"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_Displacement.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_04BCEF60BBFEE160"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_Displacement.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/RoofingTiles013C_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_6A2C00F99772FC44"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/RoofingTiles015B_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/RoofingTiles015B_1K-PNG_Displacement.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/RoofingTiles015B_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/RoofingTiles015B_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_216C7740FBD3D428"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_BaseColor.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_9CB1CADB600FC78D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/metal_dark_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_12AB4F2B75537FF5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Rust004_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/Rust004_1K-PNG_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Rust004_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Rust004_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_B72064BE96C2A00F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/wood_aged_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/wood_aged_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/wood_aged_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_23ACC8B5C0DEF1D0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/dungeon-stone1-albedo2.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/medieval_blocks_03_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/medieval_blocks_03_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_F3619A4BAB85B570"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/medieval_blocks_03_diff_1k.a.rtex.dds@
+                custom float inputs:displace_in = 0.05
+                custom float inputs:displace_out = 0
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/medieval_blocks_03_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/medieval_blocks_03_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_1A0FC3654C064F12"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_diff_1k.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_17878B07ECA237C6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_board_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_board_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_board_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_board_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_7F53C1885408FB81"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_base_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_base_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_base_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_base_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_831302832CBA4723"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_broken_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_broken_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_broken_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_broken_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_88CE0B88610D6805"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_broken_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_broken_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_broken_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_broken_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_798D99C0FA6DC666"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_base_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_base_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_base_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_base_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_E9B3DCC2DB3FB1A3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Planks027C_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/Planks027C_1K-PNG_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Planks027C_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Planks027C_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_67AC5727657E67D2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/planks_weathered_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/planks_weathered_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/planks_weathered_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/planks_weathered_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_A5CAA24AEE32F673"
+        {
+            over "Shader"
+            {
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Rope001_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_B91758E3093E0ABC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_BaseColor.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_4EF9B0EE961DA886"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/sstown/ingested/stonewall_grey_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/sstown/ingested/stonewall_grey_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/sstown/ingested/stonewall_grey_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_A5A54BC7560C1E9D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_diff_1k.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/stonework-wall-metallic.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_DBD6AF6AF6AA596E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_C492A918ABEBD99A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_031A53D9AD2C6571"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Bricks085_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Bricks085_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Bricks085_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_F2683DA54EF8918A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/dungeon-stone1-albedo2.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/dungeon-stone1-metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/dungeon-stone1-normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/dungeon-stone1-roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_1DCCBB022202E73D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/dungeon-stone1-albedo2.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/dungeon-stone1-metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/dungeon-stone1-normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/dungeon-stone1-roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_081CFB04AA71B1DC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/wall_planks_BaseColor.a.rtex.dds@
+                custom float inputs:displace_in = 0
+                custom float inputs:displace_out = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/wall_planks_Height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/wall_planks_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/wall_planks_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/wall_planks_Roughness.r.rtex.dds@
+                custom int inputs:wrap_mode_u = 1
+                custom int inputs:wrap_mode_v = 1
+            }
+        }
+
+        over "mat_3C3489CA8095187A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_A1EA85A3FC545260"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Ground083_1K-PNG_Color.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom float inputs:displace_out = 0
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/Ground083_1K-PNG_Displacement.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Ground083_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Ground083_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_8283751B2833432E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_topframe_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_topframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_topframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_topframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_928E72405CA32162"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/RoofingTiles013D_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/RoofingTiles013D_1K-PNG_Displacement.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/RoofingTiles013D_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/RoofingTiles013D_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_0050A809063CC97E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_diff_1k.a.rtex.dds@
+                custom bool inputs:inverted_blend = 0
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_F3357B9990DC49B0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Asphalt021_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Asphalt021_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Asphalt021_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_28BB507BCC502A28"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_A3D6FBA01C1CCC9D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/patterned_cobblestone_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/patterned_cobblestone_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/patterned_cobblestone_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_B1E7B7A6AF35DE46"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_5F281D44D5826168"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_99D0AB24B7D34ECA"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_4A87596EDC7F0053"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_95687135574FB69D"
+        {
+            over "Shader"
+            {
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_D9467B3A43816324"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_A7065A4021527739"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_145026E1E5A22B9D"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_38090FA9CF9BF66A"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_31931B6CAD89BA72"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_Displacement.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_4BA03DC8563AF4F5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/wood_aged_BaseColor.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/wood_aged_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/wood_aged_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_FFD9B2631C01AA21"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom color3f inputs:diffuse_color_constant = (0, 0, 0)
+                custom bool inputs:inverted_blend = 0
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Fabric064_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom float inputs:opacity_constant = 1
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Fabric064_1K-PNG_Roughness.r.rtex.dds@
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_807816AE5569C452"
+        {
+            over "Shader"
+            {
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/moon_dusted_01_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/moon_dusted_01_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_4767291576856A7C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/dark_wooden_planks_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/dark_wooden_planks_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/dark_wooden_planks_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_E11A5A97D0267CB7"
+        {
+            over "Shader"
+            {
+                custom color3f inputs:emissive_color_constant = (0.58, 0.518, 0.322)
+                custom float inputs:emissive_intensity = 5
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/lamp_emissive.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+                custom int inputs:filter_mode = 1
+            }
+        }
+
+        over "mat_429B8423F8C0BD74"
+        {
+            over "Shader"
+            {
+                custom color3f inputs:emissive_color_constant = (0.58, 0.52, 0.32)
+                custom float inputs:emissive_intensity = 5
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/lamp2_emissive.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_77D69C656C792516"
+        {
+            over "Shader"
+            {
+                custom color3f inputs:emissive_color_constant = (0.58, 0.52, 0.32)
+                custom float inputs:emissive_intensity = 5
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/lamp3_emissive.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_60149FF1FC230B4D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_sqframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_sqframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_sqframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_sqframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_DB15DA58DAFE511A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_midframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_midframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_midframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_midframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_799A7C652418A3FC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_bslashframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_bslashframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_bslashframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_bslashframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_EC1B8433E31397EB"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_slashframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_slashframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_slashframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_slashframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_5EAD7C3A228E4634"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_yframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_yframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_yframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_yframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_DB539214C5C92D19"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_revyframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_revyframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_revyframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_revyframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_86F2B61EFAA160A1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plasterwall_xframe_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plasterwall_xframe_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plasterwall_xframe_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plasterwall_xframe_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_4B72F77ED5B1CC6E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Tiles088_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Tiles088_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Tiles088_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_3866A0A7F472C13A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_Color.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/PaintedWood008C_1K-PNG_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_35AA59AC5D577A92"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/sswarehouse/ingested/paintedwood008c_mod_BaseColor.a.rtex.dds@
+                custom asset inputs:height_texture = @@
+                custom asset inputs:metallic_texture = @./assets/sswarehouse/ingested/paintedwood008c_mod_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/sswarehouse/ingested/paintedwood008c_mod_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/sswarehouse/ingested/paintedwood008c_mod_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_D99828F792C77F6B"
+        {
+            over "Shader"
+            {
+                custom float inputs:alpha_test_reference_value = 0
+                custom int inputs:alpha_test_type = 0
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom color3f inputs:emissive_color_constant = (1, 0.1, 0.1)
+                custom float inputs:emissive_intensity = 0.5
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/effects2.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+                custom bool inputs:inverted_blend = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_FCAC8BC0F1A102BC"
+        {
+            over "Shader"
+            {
+                custom float inputs:alpha_test_reference_value = 0.05
+                custom int inputs:alpha_test_type = 5
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 0
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Stylized_Water_albedo.a.rtex.dds@
+                custom bool inputs:inverted_blend = 1
+                custom float inputs:metallic_constant = 0.6
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Stylized_Water_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:opacity_constant = 0.5
+                custom float inputs:reflection_roughness_constant = 0.099999994
+                custom asset inputs:reflectionroughness_texture = @@
+                custom bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_7A8777CD12699344"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/plaster_ceiling_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/plaster_ceiling_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/plaster_ceiling_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/plaster_ceiling_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_DACC0795CDA3E6D5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/sswarehouse/ingested/plaster_ceiling_rough_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/sswarehouse/ingested/plaster_ceiling_rough_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/sswarehouse/ingested/plaster_ceiling_rough_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/sswarehouse/ingested/plaster_ceiling_rough_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_43A0360C63D77E03"
+        {
+            over "Shader"
+            {
+                custom float inputs:alpha_test_reference_value = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:inverted_blend = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_DFD7C1FCAFB282B9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/boardwall_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/boardwall_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/boardwall_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/boardwall_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_860928E8FB7EB5ED"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/sstown/ingested/large_pebbles_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/sstown/ingested/large_pebbles_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/sstown/ingested/large_pebbles_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_3C1C62E5F89E7A8C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/sstown/ingested/large_pebbles_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/sstown/ingested/large_pebbles_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/sstown/ingested/large_pebbles_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_34573EEEA302DFB1"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_tile_floor_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_tile_floor_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_tile_floor_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_876C78DF83C63281"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 1
+                custom float inputs:emissive_intensity = 0.1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/effects1.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_6BE6EE624BA1F361"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom float inputs:emissive_intensity = 0.01
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/potion_small.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_BDD26268329ADF36"
+        {
+            over "Shader"
+            {
+                custom color3f inputs:emissive_color_constant = (1, 0.1, 0.1)
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/mana_green.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_CB7862B3AC6BC141"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 20
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/potion_large.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_36E666AB8DE26051"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/spell_missile.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_4D8F2E0936CBA9A8"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/mana_green2.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_51C2D0ADAF79715D"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/mana_blue2.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_38FF52498B64D899"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/spell_ring.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_A0F8028A2BB379D4"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 0.1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/skull_ammo.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_2DD91A1B6E89F9D0"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/mana_blue.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_4E4FA3B2D29947DE"
+        {
+            over "Shader"
+            {
+                custom float inputs:emissive_intensity = 1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/mana_combo.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+            }
+        }
+
+        over "mat_3AA0B060552A4E99"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_full_BaseColor.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_full_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_full_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_3CE3F212303372FA"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:inverted_blend = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_C2A33D26C9410872"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_D1974BCE70E5E221"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:inverted_blend = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_D59A2CF49D4BD5C1"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_2C7D083C8287DA35"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_4497AAEFC3D75A4C"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_7B3A6A25ED4AB615"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_6DCFDC9F3537ECA3"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_A9E3D09D1D7AE8F1"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_317ECB2B191975A1"
+        {
+            over "Shader"
+            {
+                custom float inputs:alpha_test_reference_value = 0
+                custom int inputs:alpha_test_type = 0
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_35B1A6206C9DC584"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:inverted_blend = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_BB1D784F9869B9C8"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_7AF88EA7367479A4"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_B363D160F0A9978B"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_957340C22EE212E2"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_821C01A682FEECAF"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_2D3D2104435B694B"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_5F0A8EFE2BF71BCB"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_8F580FC0BCA7BC44"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_496FFA597559922D"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_AEA210FA7F605449"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_29936CD3DDB4989C"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_C6946BA7E9E8DB01"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_8F4F757A819E519B"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_475BCCFA23BD4241"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_31DEE109B63D0838"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_D1A28C6744D9E4A2"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_2FFCEB96B76FCCE1"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_73EEFFFB95F58D25"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 0
+            }
+        }
+
+        over "mat_8245C252EE753628"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_B0C42F652D08B338"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_77B121786B46D7D7"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_A3F15E3EBDEC3FE0"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 1
+                custom int inputs:blend_type = 4
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_71A81726D7CBEE43"
+        {
+            over "Shader"
+            {
+                custom bool inputs:blend_enabled = 0
+                custom int inputs:blend_type = 0
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_D8F99C9065F544A6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/metal_dark_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_74453307767D8C49"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/large_sandstone_blocks_01_diff_1k.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/large_sandstone_blocks_01_nor_gl_1k_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/large_sandstone_blocks_01_rough_1k.r.rtex.dds@
+            }
+        }
+
+        over "mat_D981C37C4592EC15"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/sstown/ingested/stonewall_red_BaseColor.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/sstown/ingested/stonewall_red_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/sstown/ingested/stonewall_red_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_47A60B18C5BA2D49"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/metal_dark_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_6547290D66D87602"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/metal_dark_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_DE958AF3C86BE211"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/metal_dark_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_CAFED5DA7D045B33"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/metal_dark_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+    }
+
+    over "meshes"
+    {
+        def "mesh_D57A5015D0F1D488"
+        {
+            def Xform "ref_29cb70d46e7d496daa746d1e47199526" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (60.662324657936594, 615.0377661301167, 534.4613248285284)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, -3.9439891731852867, 0, 1) )
+                        }
+
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-1.2079226507921703e-12, -3.727661620489471, 5.2276464862641205)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_b0d34e18e2a14883b56a7772c220ffcb" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (123.6013690672548, 618.0391241654653, 6.581004302378931)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_d6b0bd88a47849f7941d0532ce2d564b" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (327.1760161922219, 602.4164837399129, 128.21739780641605)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 115.09013)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1.0811150580008757, -1.6153459740221479, 0)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_B7B1AA30DCE19421"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (1.307625518475902, 0, -3.989993585270298, 1) )
+                        }
+                    }
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-0.42348876722189743, -0.5337019899488382, 0.22999999999998977)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_70366764e94c423589251665bba243ed" (
+                prepend references = @./assets/ingested/mesh_crystal_B39C50BA9B6B98A6.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (90, -90, 2.842171e-14)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (184.39247793323787, 727.6339575553123, 453.5785474443506)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_B39C50BA9B6B98A6"
+                    {
+                        over "CylinderLight"
+                        {
+                            float inputs:length = 20
+                            float inputs:radius = 5.186694
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1.0000000000000018, 0.14282708429708904, 0.7531563754301712)
+                            double3 xformOp:translate = (1.9564214853054978, -2.48121523327427e-11, 13.461497202850978)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+
+                    over "Looks"
+                    {
+                        over "mat_crystal_A682A9935B65A245"
+                        {
+                            over "Shader"
+                            {
+                                float inputs:emissive_intensity = 5
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_F45542750021F753"
+        {
+            def Xform "ref_642fe2aa63154dcd9fc270f8959bb76b" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2239.706083700599, -2520.5127505734054, -443.45147104700885)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-9.549694368615746e-11, 1.2625198021951292, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_6fe3928608964e6f9b3e6537c1dd209a" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1621.55532778323, -2000.0908047978237, -536.316811212492)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-6.647269939427588, -0.16329678624219923, 0, 1) )
+                        }
+
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-5.851330831779251, -0.7300000000000182, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_6ccdc0b2c64242e397b0a308585bc6e4" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1374.8997490300821, -2481.3507046546056, -537.0319539239039)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, -0.14310632481237917, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_ac221941346e42f980c562d48f8b53bd" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1076.6305531179821, -1878.551291527488, -537.0363507386212)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-10.87105719008423, 11.438161866683231, 0, 1) )
+                        }
+
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-11.969493304801063, 11.497129536562625, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_f1c1437b005248409f4a4a92dbc1b027" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-900, -2244.9587132661727, -536.5099594300964)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-6.648723025842628, 9.193857533546634, 0, 1) )
+                        }
+
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-7.221813349622153, 9.167151663034929, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_183fd35ae5bb4761840ad2995d7545ee" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1144.4587853813498, -2420.6686669062774, -313.5962313100494)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_5e6f6addbe1a40bca26dd32734be901b" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-900.5924342389702, -1741.0281790625786, -313.05126535255323)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_3d0ca31cba114239a8c79db83be73587" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1761.6996102124563, -1785.7184327109787, -312.602164089104)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (-2.094339766429812, -1.2299550509951587, 0, 1) )
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_9d67820e625248f0a4ef2161d7c859c0" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1931.3997135980815, -2194.0471317583674, -77.22358151972716)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_B7B1AA30DCE19421"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (4.886558365469909, 1.043459721929139, 0, 1) )
+                        }
+                    }
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (0.5981847582208575, -0.8013582189210107, 0, 0), (0.8013582189210107, 0.5981847582208575, 0, 0), (0, 0, 1, 0), (3.7844113171122444, 4.547473508864641e-13, 0, 1) )
+                        }
+
+                        over "CylinderLight"
+                        {
+                            float inputs:length = 15
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (2.972043834165106, -0.7300000000000182, 0.23000000000000398)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_1CAC4AAC90F3E4EE"
+        {
+            def Xform "ref_03aef64bc1dd42708db270c71e2570af" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1419.8947784045997, -1364.7849781054824, -120.66644889961296)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+        }
+
+        over "mesh_BD087982DCAE5625"
+        {
+            def Xform "ref_6d5c5864568c4eb68363d003dda333d7" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1997.023828485796, -904.4362701781608, -436.4625071217662)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 1.0092649510276033, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_99125FB79CCE6269"
+        {
+            def Xform "ref_6ba5c9012cc24e1dac57f54ace7dbcff" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1857.9579720480303, -1294.9870135463502, -429.3342904955493)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-0.2695844885263341, -0.7300000000000182, 0.2300000000000182)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_723e527eb4964d8aa552295381e8002e" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2120.4938869579028, -327.9672419521329, -504.30368719423814)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_fad2add9cd524ed687e650e69dd6b566" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1781.8650053392291, -1247.8681428436041, -227.83361685458792)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (-2.4053153062873207, -0.7300000000000182, 0.22999999999998977)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_3ea345b1ce384ac790a9753265c8142b" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 45)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1741.4201889150982, -967.6146390718919, -504.8582788557025)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_1c24f564472b4d7cae0743858528799d" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1737.5984738081945, -1247.86814, -227.83362)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lampw_B7B1AA30DCE19421"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (2.367802482629486, -0.7300000000000182, 0.22999999999998977)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_2AC2E1D40927D092"
+        {
+            def Xform "ref_68fa6acfcff741c1a7361c9b3171e82e" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1322.5355733887807, -901.2266874753404, -121.08786409490658)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (-97.0433120509947, 126.58835780634627, 0)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                    }
+                }
+            }
+        }
+
+        over "mesh_FA6DA23985B2C4CF"
+        {
+            def Xform "ref_65b3fdae18c94950b68172e7c4117926" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2605.848157691793, -466.52904856355065, -409.03371672109097)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_086838745cff4e449a526929df52dd78" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2587.4141973038363, -707.3938718826059, -55.14710284901187)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+                        }
+
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, -0.73, 0.23)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_0d2e96f02a0e4e848c55b844fdfad660" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2665.4283783029186, -1130.2746050513797, -217.4313502817451)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_lamp_512D1A08FB73AB54"
+                    {
+                        float3 xformOp:rotateXYZ = (0, 0, -45)
+                        float3 xformOp:scale = (1, 1, 1)
+                        double3 xformOp:translate = (195.71371188874355, -35.70586030784307, -126.98657727568019)
+                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1) )
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_53EF5356D8FC2232"
+        {
+            def Xform "ref_6c774fdc4c4c4954a7b45b5c8b5bfd89" (
+                prepend references = @./assets/ingested/mesh_crystal_B39C50BA9B6B98A6.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (-90, 180, -90)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2829.8267649936897, -823.117429561559, -703.0733291152603)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_B39C50BA9B6B98A6"
+                    {
+                        over "CylinderLight"
+                        {
+                            float inputs:length = 20
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (8.401492993034253, 7.618486687133668, 16.808901616667754)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+
+                        over "mesh"
+                        {
+                            matrix4d xformOp:transform = ( (1, 0, 0, 0), (0, 0.9753307116878045, -0.2207487323600313, 0), (0, 0.2207487323600313, 0.9753307116878045, 0), (0, 0, 0, 1) )
+                        }
+                    }
+                }
+            }
+
+            def Xform "ref_a375ecc6464d4cfc9cfc9057449b024f" (
+                prepend references = @./assets/ingested/mesh_crystal_B39C50BA9B6B98A6.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (180, -101.26697, -140.62332)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-2006.2988113345516, -698.9710956526344, -704.5479692574397)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_B39C50BA9B6B98A6"
+                    {
+                        over "CylinderLight"
+                        {
+                            double3 xformOp:rotateXYZ = (90, 90, 90)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (6.550129765335441, -3.8842451458924643, 6.817060059899404)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_8C8D1FD45CC6C585"
+        {
+            def Xform "ref_dbf9b9abad01422fb0851baad9937e48" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (802.2462895321477, -1335.9863304836178, -88.5265972054939)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_623e55b3c72441ebb3bfca8d1b2835a1" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (806.8940726650337, -1929.1271939055725, -48.63578364501861)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_81db206d398d4dbb95a0535f66a67a99" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (1351.5755689560035, -1749.1690377018222, -103.54487823023703)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_76f0f59e54304d9fb03d73be2e60cce1" (
+                prepend references = @./assets/ingested/mesh_lamp_512D1A08FB73AB54.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (2684.8324886846367, -1735.1360656306688, -48.6562283142946)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_5394d24bc4c44225ab1084b9718e1449" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (2605.9533536803006, -1400, 80)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+
+            def Xform "ref_fe589d2381d246c1beb77b1b22c701d8" (
+                prepend references = @./assets/ingested/mesh_lampw_B7B1AA30DCE19421.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (2867.525701319637, -1400, 80)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+        }
+    }
+}
+

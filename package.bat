@@ -1,0 +1,1 @@
+7z a -tzip .\heretic2_remix_files.zip .\remixmod\*

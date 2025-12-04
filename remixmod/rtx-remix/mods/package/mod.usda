@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    customLayerData = {
+        string lightspeed_game_name = "Heretic 2"
+        string lightspeed_layer_type = "replacement"
+        dictionary lightspeed_mod_dependencies = {
+        }
+        string lightspeed_mod_name = "h2enhanced"
+        string lightspeed_mod_version = "1.0.0"
+        dictionary omni_layer = {
+            dictionary locked = {
+                bool "./deps/captures/ssdocks_01.usd" = 1
+            }
+        }
+    }
+    endTimeCode = 100
+    metersPerUnit = 1
+    startTimeCode = 0
+    subLayers = [
+        @./silverspring_textures.usda@,
+        @./silverspring_lights.usda@,
+        @./andoria_textures.usda@,
+        @./andoria_lights.usda@
+    ]
+    timeCodesPerSecond = 24
+    upAxis = "Z"
+)
+

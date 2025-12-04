@@ -1,0 +1,1 @@
+move %LOCALAPPDATA%\CrashDumps\Heretic2*.exe* .

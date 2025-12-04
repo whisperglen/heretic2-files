@@ -1,0 +1,58 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: CreateRelease
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+env:
+  
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        submodules: 'true'
+
+#    - name: Add MSBuild to PATH
+#      uses: microsoft/setup-msbuild@v1.1.3
+
+#    - name: Restore NuGet packages
+#      working-directory: ${{env.GITHUB_WORKSPACE}}
+#      run: nuget restore ${{env.SOLUTION_FILE_PATH}}
+
+    - name: Create artifact
+      run: .\package.bat
+
+    - name: Create Release
+      id: create_release
+      uses: comnoco/create-release-action@v2.0.5
+      with:
+        draft: false
+        prerelease: false
+        tag_name: ${{ github.ref }}
+        release_name: ${{ github.ref_name }}
+
+    - name: Upload win32 artifact
+      uses: actions/github-script@v4
+      with:
+        script: |
+          const fs = require('fs');
+          // Upload the release asset
+          await github.repos.uploadReleaseAsset({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            release_id: ${{ steps.create_release.outputs.id }},
+            name: "heretic2_remix_files.zip",
+            data: await fs.readFileSync("./heretic2_remix_files.zip")
+          });
