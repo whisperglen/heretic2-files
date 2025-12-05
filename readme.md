@@ -11,9 +11,9 @@
   1. bind f "suckitdown light" -> this will toggle the Light Shrine effect
   2. bind b "rmx_flashlight_toggle" -> this will toggle an over the shoulder front-facing light (not lore accurate but does the job)
 - Automatic generation of smoothing surface Normals for a select number of textures
-  - see [compnormals.global] inside .ini file
+  - see [compnormals.global] inside Heretic2dx_customise.ini file
   - rmx_normals 3 will compute Normals for all surfaces, but this will noticeably affect fps
-  - rmx_logtextures 1 will log to console all textures that are rendered (use rmx_novis 0 and r_nocull 0 to only log textures visible on-screen)
+  - rmx_logtextures 1 will log to console all textures that are rendered (use rmx_novis 0 and r_nocull 0 to only log textures visible on-screen); this helps me to add new textures to the ini section
 
 ##  **WARNING**
 - This was planned to be a Lazy-man's PBR attempt, to see how far ready made assets and quick texture modification could take me.
@@ -27,7 +27,7 @@
 ## Installation:
 I have used v1.06 because this was working with Remix when I tried it, v1.07 has some visual changes that broke Remix.
 1. unzip the mod release over of your Heretic 2 installation
-2. unzip the Remix Runtime over the Heretic 2 installation
+2. unzip the Remix Runtime over the Heretic 2 installation; get if from Remix github Actions or use the version I saved in this repo: [rtx-remix-for-x86-games-8b19262-1004-release.zip](rtx-remix-for-x86-games-8b19262-1004-release.zip)
 3. start the game via Heretic2dx.exe (which is just a copy of Heretic2.exe v1.06, to make sure opengl32.dll wrapper is loaded from current directory)
 4. DO NOT CHANGE video options (Gamma/Brightness/Contrast will break Remix, don't do it)
     - OpenGL is the mandatory video driver, if you use the widescreen hack, remove it, there is proper Resolution support for OpenGL mode
@@ -40,7 +40,7 @@ I have used v1.06 because this was working with Remix when I tried it, v1.07 has
 6. use gl_texturemode GL_NEAREST in console for a pixelated look
 
 ## Attributions for used Assets:
-This would not have been possible without the work and permissive licensing of the following:
+This would not have been possible without the work of the wonderful people maintaining these websites and tools and the permissive licensing they decided to use:
 - Created using pbr materials from Poly Haven, licensed under the Creative Commons CC0 1.0 Universal License. https://polyhaven.com/license/
 - Created using pbr materials from ambientCG.com, licensed under the Creative Commons CC0 1.0 Universal License. https://docs.ambientcg.com/license/
 - Created using pbr materials made in InstaMAT Studio, licensed under a Pioneer License: https://instamaterial.com/licensing/
