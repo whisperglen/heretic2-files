@@ -5,7 +5,7 @@
 2. [Patching H2Common.dll to add nullchecks when deallocating resources](heretic2_h2common_nullchecks.md)
 
 ## Remix PBR and relight Mod contents:
-- Updated so far with PBR and extra lights the following maps: ssdocks, sswarehouse, sstown
+- Updated so far with PBR and extra lights the following maps: ssdocks, sswarehouse, sstown (many old textures are still present)
 - Weapon projectiles and effects either spawn a remix light and/or are low-key emmisive to be visible in the dark
 - Two flashlights are available (necessary for the untouched maps):
   1. bind f "suckitdown light" -> this will toggle the Light Shrine effect
@@ -39,7 +39,8 @@ I have used v1.06 because this was working with Remix when I tried it, v1.07 has
     - bind b "rmx_flashlight_toggle"
 6. use gl_texturemode GL_NEAREST in console for a pixelated look
 
-## Attributions for Used Assets:
+## Attributions for used Assets:
+This would not have been possible without the work and permissive licensing of the following:
 - Created using pbr materials from Poly Haven, licensed under the Creative Commons CC0 1.0 Universal License. https://polyhaven.com/license/
 - Created using pbr materials from ambientCG.com, licensed under the Creative Commons CC0 1.0 Universal License. https://docs.ambientcg.com/license/
 - Created using pbr materials made in InstaMAT Studio, licensed under a Pioneer License: https://instamaterial.com/licensing/
