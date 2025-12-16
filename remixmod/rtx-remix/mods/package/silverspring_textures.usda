@@ -973,7 +973,7 @@ over "RootNode"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/fireblast_spark.a.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ingested/fireblast_spark1.a.rtex.dds@
                 custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
@@ -1926,7 +1926,7 @@ over "RootNode"
                 {
                     float3 xformOp:rotateXYZ = (180, 2.842171e-14, 180)
                     float3 xformOp:scale = (1, 1, 1)
-                    double3 xformOp:translate = (-1319.2918026957962, -1040.9096079365554, -11.087639621936676)
+                    double3 xformOp:translate = (-1301.83456734492, -1040.9096079365554, -11.087639621936816)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
                 }
             }

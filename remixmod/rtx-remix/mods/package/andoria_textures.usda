@@ -22,6 +22,7 @@ over "RootNode"
         {
             over "Shader"
             {
+                asset inputs:diffuse_texture = @./assets/ingested/crystal.a.rtex.dds@
                 custom float inputs:emissive_intensity = 1
                 custom asset inputs:emissive_mask_texture = @./assets/ingested/crystal_emissive.e.rtex.dds@
                 custom bool inputs:enable_emission = 1

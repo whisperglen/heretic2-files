@@ -13,7 +13,7 @@
             }
         }
     }
-    endTimeCode = 100
+    endTimeCode = 40
     metersPerUnit = 1
     startTimeCode = 0
     subLayers = [
@@ -22,7 +22,7 @@
         @./andoria_textures.usda@,
         @./andoria_lights.usda@
     ]
-    timeCodesPerSecond = 24
+    timeCodesPerSecond = 60
     upAxis = "Z"
 )
 

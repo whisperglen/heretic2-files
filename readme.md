@@ -26,7 +26,7 @@
 
 ## Installation:
 I have used v1.06 because this was working with Remix when I tried it, v1.07 has some visual changes that broke Remix.
-1. unzip the mod release over of your Heretic 2 installation
+1. unzip the mod release over your Heretic 2 installation
 2. unzip the Remix Runtime over the Heretic 2 installation; get if from Remix github Actions or use the version I saved in this repo: [rtx-remix-for-x86-games-8b19262-1004-release.zip](rtx-remix-for-x86-games-8b19262-1004-release.zip)
 3. start the game via Heretic2dx.exe (which is just a copy of Heretic2.exe v1.06, to make sure opengl32.dll wrapper is loaded from current directory)
 4. DO NOT CHANGE video options (Gamma/Brightness/Contrast will break Remix, don't do it)

@@ -71,7 +71,7 @@ def Xform "ReferenceTarget" (
                     uniform token info:implementationSource = "sourceAsset"
                     uniform asset info:mdl:sourceAsset = @AperturePBR_Opacity.mdl@
                     uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Opacity"
-                    asset inputs:diffuse_texture = @./crystal_A682A9935B65A245.a.rtex.dds@ (
+                    asset inputs:diffuse_texture = @./crystal.a.rtex.dds@ (
                         colorSpace = "auto"
                     )
                     float inputs:emissive_intensity = 1
