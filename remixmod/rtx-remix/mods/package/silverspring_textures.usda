@@ -591,9 +591,10 @@ over "RootNode"
         {
             over "Shader"
             {
+                asset inputs:diffuse_texture = @./assets/ingested/lampw_main.a.rtex.dds@
                 custom color3f inputs:emissive_color_constant = (0.58, 0.518, 0.322)
                 custom float inputs:emissive_intensity = 5
-                custom asset inputs:emissive_mask_texture = @./assets/ingested/lamp_emissive.e.rtex.dds@
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/lampw_emissive.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
                 custom int inputs:filter_mode = 1
             }
@@ -603,9 +604,10 @@ over "RootNode"
         {
             over "Shader"
             {
+                asset inputs:diffuse_texture = @./assets/ingested/lampa_main.a.rtex.dds@
                 custom color3f inputs:emissive_color_constant = (0.58, 0.52, 0.32)
                 custom float inputs:emissive_intensity = 5
-                custom asset inputs:emissive_mask_texture = @./assets/ingested/lamp2_emissive.e.rtex.dds@
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/lampa_emissive.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
             }
         }
@@ -614,9 +616,10 @@ over "RootNode"
         {
             over "Shader"
             {
+                asset inputs:diffuse_texture = @./assets/ingested/lampf_main.a.rtex.dds@
                 custom color3f inputs:emissive_color_constant = (0.58, 0.52, 0.32)
                 custom float inputs:emissive_intensity = 5
-                custom asset inputs:emissive_mask_texture = @./assets/ingested/lamp3_emissive.e.rtex.dds@
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/lampf_emissive.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
             }
         }
@@ -731,23 +734,6 @@ over "RootNode"
             }
         }
 
-        over "mat_D99828F792C77F6B"
-        {
-            over "Shader"
-            {
-                custom float inputs:alpha_test_reference_value = 0
-                custom int inputs:alpha_test_type = 0
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
-                custom color3f inputs:emissive_color_constant = (1, 0.1, 0.1)
-                custom float inputs:emissive_intensity = 0.5
-                custom asset inputs:emissive_mask_texture = @./assets/ingested/effects2.e.rtex.dds@
-                custom bool inputs:enable_emission = 1
-                custom bool inputs:inverted_blend = 0
-                custom bool inputs:use_legacy_alpha_state = 1
-            }
-        }
-
         over "mat_FCAC8BC0F1A102BC"
         {
             over "Shader"
@@ -758,10 +744,10 @@ over "RootNode"
                 custom int inputs:blend_type = 0
                 asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Stylized_Water_albedo.a.rtex.dds@
                 custom bool inputs:inverted_blend = 1
-                custom float inputs:metallic_constant = 0.6
+                custom float inputs:metallic_constant = 0.4
                 custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Stylized_Water_normal_OTH_Normal.n.rtex.dds@
                 custom float inputs:opacity_constant = 0.5
-                custom float inputs:reflection_roughness_constant = 0.099999994
+                custom float inputs:reflection_roughness_constant = 0.049999997
                 custom asset inputs:reflectionroughness_texture = @@
                 custom bool inputs:use_legacy_alpha_state = 0
             }
@@ -845,11 +831,24 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 1
+                asset inputs:diffuse_texture = @./assets/ingested/effects1_main.a.rtex.dds@
                 custom float inputs:emissive_intensity = 0.1
                 custom asset inputs:emissive_mask_texture = @./assets/ingested/effects1.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
+                custom int inputs:filter_mode = 1
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_D99828F792C77F6B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/effects2_main.a.rtex.dds@
+                custom float inputs:emissive_intensity = 0.1
+                custom asset inputs:emissive_mask_texture = @./assets/ingested/effects2.e.rtex.dds@
+                custom bool inputs:enable_emission = 1
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -859,6 +858,7 @@ over "RootNode"
             over "Shader"
             {
                 custom bool inputs:blend_enabled = 0
+                asset inputs:diffuse_texture = @./assets/ingested/potion_small_main.a.rtex.dds@
                 custom float inputs:emissive_intensity = 0.01
                 custom asset inputs:emissive_mask_texture = @./assets/ingested/potion_small.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
@@ -880,7 +880,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom float inputs:emissive_intensity = 20
+                asset inputs:diffuse_texture = @./assets/ingested/potion_large_main.a.rtex.dds@
+                custom float inputs:emissive_intensity = 0.01
                 custom asset inputs:emissive_mask_texture = @./assets/ingested/potion_large.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
                 custom bool inputs:use_legacy_alpha_state = 1
@@ -891,9 +892,10 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom float inputs:emissive_intensity = 1
+                custom float inputs:emissive_intensity = 0.1
                 custom asset inputs:emissive_mask_texture = @./assets/ingested/spell_missile.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
+                custom int inputs:filter_mode = 1
             }
         }
 
@@ -931,7 +933,7 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom float inputs:emissive_intensity = 0.1
+                custom float inputs:emissive_intensity = 0.5
                 custom asset inputs:emissive_mask_texture = @./assets/ingested/skull_ammo.e.rtex.dds@
                 custom bool inputs:enable_emission = 1
             }
@@ -971,9 +973,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
-                custom bool inputs:inverted_blend = 0
+                asset inputs:diffuse_texture = @./assets/ingested/fireblast_spark.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -982,8 +983,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/fireblast1.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -992,9 +993,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
-                custom bool inputs:inverted_blend = 0
+                asset inputs:diffuse_texture = @./assets/ingested/pick.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1013,8 +1013,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/wisp1.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1156,8 +1156,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/phoenix_bubble.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1176,8 +1176,6 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1236,9 +1234,9 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
-                custom bool inputs:use_legacy_alpha_state = 0
+                asset inputs:diffuse_texture = @./assets/ingested/sphere_bubble.a.rtex.dds@
+                custom int inputs:filter_mode = 1
+                custom bool inputs:use_legacy_alpha_state = 1
             }
         }
 
@@ -1246,8 +1244,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/staffblue.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1306,8 +1304,8 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 0
-                custom int inputs:blend_type = 0
+                asset inputs:diffuse_texture = @./assets/ingested/reticle.a.rtex.dds@
+                custom int inputs:filter_mode = 1
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1384,6 +1382,94 @@ over "RootNode"
                 custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/metal_dark_Metalness.m.rtex.dds@
                 custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/metal_dark_OTH_Normal.n.rtex.dds@
                 custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/metal_dark_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_8E0A2C7F85E0064C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks2.dds@
+            }
+        }
+
+        over "mat_A87212D2EC67EB76"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks0.dds@
+            }
+        }
+
+        over "mat_ADD861433E75AB0C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks5.dds@
+            }
+        }
+
+        over "mat_A0C70F3CCF52B030"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks3.dds@
+            }
+        }
+
+        over "mat_AC67FDA7F2CBED8B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks1.dds@
+            }
+        }
+
+        over "mat_986A78EFC98DEE51"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks4.dds@
+            }
+        }
+
+        over "mat_65F53089F12BD05D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town2.dds@
+            }
+        }
+
+        over "mat_47E68B3ED3B4546E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town5.dds@
+            }
+        }
+
+        over "mat_D5358EA34D69A5F0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town3.dds@
+            }
+        }
+
+        over "mat_8318762B0FFB060D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town1.dds@
+            }
+        }
+
+        over "mat_58F97735030CACE3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town0.dds@
             }
         }
     }
@@ -1825,6 +1911,25 @@ over "RootNode"
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
                 }
             }
+
+            def Xform "ref_78f5c227ea704e169696be9af4008cc7" (
+                prepend references = @./assets/ingested/mesh_crystal_B39C50BA9B6B98A6.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (180, 2.842171e-14, 180)
+                    float3 xformOp:scale = (1, 1, 1)
+                    double3 xformOp:translate = (-1319.2918026957962, -1040.9096079365554, -11.087639621936676)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
         }
 
         over "mesh_BD087982DCAE5625"
@@ -2056,7 +2161,7 @@ over "RootNode"
                 {
                     float3 xformOp:rotateXYZ = (0, 0, 0)
                     float3 xformOp:scale = (1, 1, 1)
-                    double3 xformOp:translate = (-2587.4141973038363, -707.3938718826059, -55.14710284901187)
+                    double3 xformOp:translate = (-2587.4141973038363, -707.3938718826059, -56.943770932042504)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
 
                     over "mesh_lamp_512D1A08FB73AB54"
@@ -2292,6 +2397,30 @@ over "RootNode"
                     float3 xformOp:scale = (1, 1, 1)
                     double3 xformOp:translate = (2867.525701319637, -1400, 80)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                }
+            }
+        }
+    }
+
+    over "instances"
+    {
+        over "inst_1CAC4AAC90F3E4EE_0"
+        {
+            over "ref_78f5c227ea704e169696be9af4008cc7"
+            {
+                over "XForms"
+                {
+                    over "mesh_B39C50BA9B6B98A6"
+                    {
+                        over "CylinderLight"
+                        {
+                            float inputs:radius = 4
+                            double3 xformOp:rotateXYZ = (0, -90, 0)
+                            double3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (2.2316264884618704, -0.1501949196770056, 21.189103282998673)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
                 }
             }
         }

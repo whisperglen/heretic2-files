@@ -71,12 +71,12 @@ def Xform "ReferenceTarget" (
                     uniform token info:implementationSource = "sourceAsset"
                     uniform asset info:mdl:sourceAsset = @AperturePBR_Opacity.mdl@
                     uniform token info:mdl:sourceAsset:subIdentifier = "AperturePBR_Opacity"
-                    asset inputs:diffuse_texture = @./lampw_E11A5A97D0267CB7.a.rtex.dds@ (
+                    asset inputs:diffuse_texture = @./lampw_main.a.rtex.dds@ (
                         colorSpace = "auto"
                     )
                     color3f inputs:emissive_color_constant = (0.58, 0.518, 0.322)
                     float inputs:emissive_intensity = 5
-                    asset inputs:emissive_mask_texture = @./lamp_emissive.e.rtex.dds@
+                    asset inputs:emissive_mask_texture = @./lampw_emissive.e.rtex.dds@
                     bool inputs:enable_emission = 1
                     token outputs:out (
                         renderType = "material"

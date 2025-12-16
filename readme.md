@@ -18,11 +18,11 @@
 ##  **WARNING**
 - This was planned to be a Lazy-man's PBR attempt, to see how far ready made assets and quick texture modification could take me.
 - I have taken **a l o t** of creative liberties, I tried to use materials similar to the original, but if the color scheme hurt my eyes, I just picked some other material
-- Also, sice I am not replacing 3D assets, some textures look out of place: Remember the original are low quality, therefore higher quality material will just show all the corners that were cut in the original game regarding placement and wrapping
+- Also, since I am not replacing 3D assets, some textures look out of place: Remember the original are low quality, therefore higher quality material will just show all the corners that were cut in the original game regarding placement and wrapping
 
 ## Using work from 2 of my other repos:
-- QindieGL fork: https://github.com/whisperglen/QindieGL
-- Heretic game SDK: https://github.com/whisperglen/Heretic2Toolkit
+- QindieGL fork: https://github.com/whisperglen/QindieGL (v1.2.0a)
+- Heretic game SDK: https://github.com/whisperglen/Heretic2Toolkit (v0.3)
 
 ## Installation:
 I have used v1.06 because this was working with Remix when I tried it, v1.07 has some visual changes that broke Remix.
