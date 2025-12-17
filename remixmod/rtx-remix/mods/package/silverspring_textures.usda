@@ -1025,7 +1025,6 @@ over "RootNode"
             {
                 custom bool inputs:blend_enabled = 0
                 custom int inputs:blend_type = 0
-                custom bool inputs:use_legacy_alpha_state = 1
             }
         }
 
@@ -1033,8 +1032,7 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom bool inputs:blend_enabled = 1
-                custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/defense_ring.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
