@@ -1470,6 +1470,14 @@ over "RootNode"
                 asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town0.dds@
             }
         }
+
+        over "mat_0F8C830DC7359B2A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town4.dds@
+            }
+        }
     }
 
     over "meshes"
