@@ -21,7 +21,7 @@
 - Also, since I am not replacing 3D assets, some textures look out of place: Remember the original are low quality, therefore higher quality material will just show all the corners that were cut in the original game regarding placement and wrapping
 
 ## Using work from 2 of my other repos:
-- QindieGL fork: https://github.com/whisperglen/QindieGL (v1.2.0a)
+- QindieGL fork: https://github.com/whisperglen/QindieGL (v1.2.0b)
 - Heretic game SDK: https://github.com/whisperglen/Heretic2Toolkit (v0.3)
 
 ## Installation:
@@ -44,6 +44,10 @@ This would not have been possible without the work of the wonderful people maint
 - Created using pbr materials from Poly Haven, licensed under the Creative Commons CC0 1.0 Universal License. https://polyhaven.com/license/
 - Created using pbr materials from ambientCG.com, licensed under the Creative Commons CC0 1.0 Universal License. https://docs.ambientcg.com/license/
 - Created using pbr materials made in InstaMAT Studio, licensed under a Pioneer License: https://instamaterial.com/licensing/
+
+From sketchfab.com:
+- "Old Bourbon Barrels" (https://skfb.ly/orpSZ) by Mad_Lobster_Workshop is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+  Barrel no.5 material was modified to add a decal (skull and flames) and used for explosive barrels.
 
 <a href="https://polyhaven.com">
 <img src="./attribution_logos/Poly-Haven-Logo-Colored-Line-Black.png" alt="polyhaven.com" width="200" style="padding: 10px;"/>

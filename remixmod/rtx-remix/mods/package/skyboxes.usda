@@ -1,0 +1,359 @@
+#usda 1.0
+(
+    upAxis = "Z"
+)
+
+over "RootNode"
+{
+    over "Looks"
+    {
+        over "mat_ADD861433E75AB0C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks0.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_A87212D2EC67EB76"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks1.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_AC67FDA7F2CBED8B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks2.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_A0C70F3CCF52B030"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks3.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_8E0A2C7F85E0064C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks4.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_986A78EFC98DEE51"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks5.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_47E68B3ED3B4546E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town0.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_58F97735030CACE3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town1.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_8318762B0FFB060D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town2.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_D5358EA34D69A5F0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town3.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_65F53089F12BD05D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town4.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_0F8C830DC7359B2A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town5.dds@
+                custom int inputs:filter_mode = 0
+            }
+        }
+
+        over "mat_BDF44296B6B88A73"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/canyon4.dds@
+            }
+        }
+
+        over "mat_14D9949FFE149C24"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/canyon1.dds@
+            }
+        }
+
+        over "mat_2FAA0276BCFE50D2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/canyon5.dds@
+            }
+        }
+
+        over "mat_17CE5C73033DCC23"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/canyon2.dds@
+            }
+        }
+
+        over "mat_5A4A2FFD3A2C35A0"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/canyon3.dds@
+            }
+        }
+
+        over "mat_152CCEBDCE8223E4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/canyon0.dds@
+            }
+        }
+
+        over "mat_389D82C308F862EB"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/swamp1.dds@
+            }
+        }
+
+        over "mat_9A71E82A37740BE5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/swamp2.dds@
+            }
+        }
+
+        over "mat_C837E50132CBC82E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/swamp4.dds@
+            }
+        }
+
+        over "mat_B49F8CF9B9E18D40"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/swamp0.dds@
+            }
+        }
+
+        over "mat_B666EEA5749FDEE2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/swamp3.dds@
+            }
+        }
+
+        over "mat_C5E69BDAD019132E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/swamp5.dds@
+            }
+        }
+
+        over "mat_8DB3B35A343848F4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/andoria4.dds@
+            }
+        }
+
+        over "mat_A6DF6D75D6B6E445"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/andoria5.dds@
+            }
+        }
+
+        over "mat_A76766DECBE00AE5"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/andoria2.dds@
+            }
+        }
+
+        over "mat_A925836C9B9EC77E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/andoria0.dds@
+            }
+        }
+
+        over "mat_B29C8ED11119E36F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/andoria1.dds@
+            }
+        }
+
+        over "mat_1F09284040B747B2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/andoria3.dds@
+            }
+        }
+
+        over "mat_82FB682177EA74D8"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/cloudhub4.dds@
+            }
+        }
+
+        over "mat_1F15EC80BDDA03DB"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/cloudhub5.dds@
+            }
+        }
+
+        over "mat_7D178870D71BDCFC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/cloudhub1.dds@
+            }
+        }
+
+        over "mat_C636A437A13D3DB6"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/cloudhub3.dds@
+            }
+        }
+
+        over "mat_F94E688967EF8C96"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/cloudhub2.dds@
+            }
+        }
+
+        over "mat_672E753908BF3E3C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/cloudhub0.dds@
+            }
+        }
+
+        over "mat_F1714F5F884DD84C"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/hive4.dds@
+            }
+        }
+
+        over "mat_106C65F7A3746840"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/hive5.dds@
+            }
+        }
+
+        over "mat_984C356867650A3B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/hive2.dds@
+            }
+        }
+
+        over "mat_E3422AD09B1C05D2"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/hive1.dds@
+            }
+        }
+
+        over "mat_48BBAFD78E3CA6B4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/hive3.dds@
+            }
+        }
+
+        over "mat_324B0EB49D57D9EC"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/sky/hive0.dds@
+            }
+        }
+    }
+}
+

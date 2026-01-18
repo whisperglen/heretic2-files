@@ -288,7 +288,6 @@ over "RootNode"
             over "Shader"
             {
                 asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_diff_1k.a.rtex.dds@
-                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/stonework-wall-metallic.m.rtex.dds@
                 custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_nor_gl_1k_OTH_Normal.n.rtex.dds@
                 custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_rough_1k.r.rtex.dds@
             }
@@ -465,8 +464,12 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/crate_BaseColor.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/crate_Height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/crate_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/crate_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/crate_Roughness.r.rtex.dds@
             }
         }
 
@@ -536,10 +539,9 @@ over "RootNode"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_Color.a.rtex.dds@
-                custom asset inputs:height_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_Displacement.h.rtex.dds@
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Bricks096_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_full_BaseColor.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_full_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/rock_wall_13_waterlogged_full_Roughness.r.rtex.dds@
             }
         }
 
@@ -734,7 +736,9 @@ over "RootNode"
             }
         }
 
-        over "mat_FCAC8BC0F1A102BC"
+        over "mat_FCAC8BC0F1A102BC" (
+            references = @./materials/AperturePBR_Translucent.usda@</Looks/mat_AperturePBR_Translucent>
+        )
         {
             over "Shader"
             {
@@ -749,6 +753,9 @@ over "RootNode"
                 custom float inputs:opacity_constant = 0.5
                 custom float inputs:reflection_roughness_constant = 0.049999997
                 custom asset inputs:reflectionroughness_texture = @@
+                custom color3f inputs:transmittance_color = (0.992278, 0.992268, 0.992268)
+                custom asset inputs:transmittance_texture = @./assets/ssdocks/ingested/Stylized_Water_albedo.a.rtex.dds@
+                custom bool inputs:use_diffuse_layer = 0
                 custom bool inputs:use_legacy_alpha_state = 0
             }
         }
@@ -775,13 +782,18 @@ over "RootNode"
             }
         }
 
-        over "mat_43A0360C63D77E03"
+        over "mat_43A0360C63D77E03" (
+            references = @./materials/AperturePBR_Translucent.usda@</Looks/mat_AperturePBR_Translucent>
+        )
         {
             over "Shader"
             {
                 custom float inputs:alpha_test_reference_value = 0
                 custom int inputs:blend_type = 0
                 custom bool inputs:inverted_blend = 0
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Stylized_Water_normal_OTH_Normal.n.rtex.dds@
+                custom color3f inputs:transmittance_color = (1, 0.99999, 0.99999)
+                custom asset inputs:transmittance_texture = @./assets/ssdocks/ingested/Stylized_Water_albedo.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1383,99 +1395,64 @@ over "RootNode"
             }
         }
 
-        over "mat_8E0A2C7F85E0064C"
+        over "mat_4FF595964DAD8D83"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks2.dds@
+                asset inputs:diffuse_texture = @./assets/ingested/characters/corvus.a.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.85
             }
         }
 
-        over "mat_A87212D2EC67EB76"
+        over "mat_2E58342DA5F92FEC"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks0.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/crate_slash_BaseColor.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/crate_slash_Height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/crate_slash_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/crate_slash_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/crate_slash_Roughness.r.rtex.dds@
             }
         }
 
-        over "mat_ADD861433E75AB0C"
+        over "mat_D39C48CFF72C6FEE"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks5.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/crate_cross_BaseColor.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/crate_cross_Height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/crate_cross_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/crate_cross_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/crate_cross_Roughness.r.rtex.dds@
             }
         }
 
-        over "mat_A0C70F3CCF52B030"
+        over "mat_B489D7FE961B925F"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks3.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/crate_small_w_BaseColor.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/crate_small_w_Height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/crate_small_w_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/crate_small_w_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/crate_small_w_Roughness.r.rtex.dds@
             }
         }
 
-        over "mat_AC67FDA7F2CBED8B"
+        over "mat_A4D9ACA9E2A6BAD2"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks1.dds@
-            }
-        }
-
-        over "mat_986A78EFC98DEE51"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_docks4.dds@
-            }
-        }
-
-        over "mat_65F53089F12BD05D"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town2.dds@
-            }
-        }
-
-        over "mat_47E68B3ED3B4546E"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town5.dds@
-            }
-        }
-
-        over "mat_D5358EA34D69A5F0"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town3.dds@
-            }
-        }
-
-        over "mat_8318762B0FFB060D"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town1.dds@
-            }
-        }
-
-        over "mat_58F97735030CACE3"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town0.dds@
-            }
-        }
-
-        over "mat_0F8C830DC7359B2A"
-        {
-            over "Shader"
-            {
-                asset inputs:diffuse_texture = @./assets/ingested/sky/ss_town4.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/crate_small_l_BaseColor.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/ingested/crate_small_l_Height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/crate_small_l_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/crate_small_l_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/crate_small_l_Roughness.r.rtex.dds@
             }
         }
     }

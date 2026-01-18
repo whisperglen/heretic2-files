@@ -1,0 +1,221 @@
+#usda 1.0
+(
+    upAxis = "Z"
+)
+
+over "RootNode"
+{
+    over "meshes"
+    {
+        over "mesh_A9D3D12ED12B9BAA" (
+            references = None
+        )
+        {
+            token visibility = "inherited"
+
+            def Xform "ref_dc3f9a2bbd29491ca93ab42e3b8cf327" (
+                prepend references = @./assets/ssdocks/meshes/bourbon_barrel.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (90, 0, 0)
+                    float3 xformOp:scale = (45, 43, 45)
+                    double3 xformOp:translate = (0, -8.981260180007666e-12, -19.5)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "root"
+                    {
+                        over "scene"
+                        {
+                            float3 xformOp:rotateXYZ = (0, -0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                            over "Meshes"
+                            {
+                                float3 xformOp:rotateXYZ = (5.2110204e-13, -0, 0)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                over "Sketchfab_model"
+                                {
+                                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                                    float3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                    over "root"
+                                    {
+                                        over "GLTF_SceneRootNode"
+                                        {
+                                            float3 xformOp:rotateXYZ = (0, -0, 0)
+                                            float3 xformOp:scale = (1, 1, 1)
+                                            double3 xformOp:translate = (0, 0, 0)
+                                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                            over "Bourbon_Barrel_Type_A_03_2"
+                                            {
+                                                float3 xformOp:rotateXYZ = (0, -0, 0)
+                                                float3 xformOp:scale = (1, 1, 1)
+                                                double3 xformOp:translate = (0, 0, 0)
+                                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                                over "Object_2"
+                                                {
+                                                    over "Object_2"
+                                                    {
+                                                        uniform bool doubleSided = 0
+                                                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                                                        float3 xformOp:scale = (1, 1, 1)
+                                                        double3 xformOp:translate = (0, 0, 0)
+                                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        over "_materials"
+                        {
+                            over "Bourbon_Barrel_Type_A_03"
+                            {
+                                over "Shader"
+                                {
+                                    asset inputs:metallic_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_03_metallicRoughness_metal.m.rtex.dds@
+                                    custom asset inputs:normalmap_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_03_normal_OTH_Normal.n.rtex.dds@
+                                    float inputs:reflection_roughness_constant = 1
+                                    asset inputs:reflectionroughness_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_03_metallicRoughness_rough.r.rtex.dds@
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        over "mesh_C80F5C59C4728398" (
+            references = None
+        )
+        {
+            def Xform "ref_bf084855cd8e4546835bece77b39b033" (
+                prepend references = @./assets/ssdocks/meshes/bourbon_barrel_explosive.usda@
+            )
+            {
+                custom bool IsRemixRef = 1
+                double3 xformOp:rotateXYZ = (0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                over "XForms"
+                {
+                    float3 xformOp:rotateXYZ = (90, 0, 0)
+                    float3 xformOp:scale = (45, 43, 45)
+                    double3 xformOp:translate = (0, 8.86757334228605e-12, -19.5)
+                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "root"
+                    {
+                        over "scene"
+                        {
+                            float3 xformOp:rotateXYZ = (0, -0, 0)
+                            float3 xformOp:scale = (1, 1, 1)
+                            double3 xformOp:translate = (0, 0, 0)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                            over "Meshes"
+                            {
+                                float3 xformOp:rotateXYZ = (5.2110204e-13, -0, 0)
+                                float3 xformOp:scale = (1, 1, 1)
+                                double3 xformOp:translate = (0, 0, 0)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                over "Sketchfab_model"
+                                {
+                                    float3 xformOp:rotateXYZ = (0, 0, 0)
+                                    float3 xformOp:scale = (1, 1, 1)
+                                    double3 xformOp:translate = (0, 0, 0)
+                                    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                    over "root"
+                                    {
+                                        over "GLTF_SceneRootNode"
+                                        {
+                                            float3 xformOp:rotateXYZ = (0, -0, 0)
+                                            float3 xformOp:scale = (1, 1, 1)
+                                            double3 xformOp:translate = (0, 0, 0)
+                                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                                            over "Bourbon_Barrel_Type_A_03_2"
+                                            {
+                                                over "Object_2"
+                                                {
+                                                    over "Object_2"
+                                                    {
+                                                        uniform bool doubleSided = 0
+                                                        float3 xformOp:rotateXYZ = (0, 0, 0)
+                                                        float3 xformOp:scale = (1, 1, 1)
+                                                        double3 xformOp:translate = (0, -0.5006943979996441, 0)
+                                                        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        over "_materials"
+                        {
+                            over "Bourbon_Barrel_Type_A_03"
+                            {
+                                over "Shader"
+                                {
+                                    asset inputs:metallic_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_03_metallicRoughness_metal.m.rtex.dds@
+                                    custom asset inputs:normalmap_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_03_normal_OTH_Normal.n.rtex.dds@
+                                    asset inputs:reflectionroughness_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_03_metallicRoughness_rough.r.rtex.dds@
+                                }
+                            }
+
+                            over "Bourbon_Barrel_Type_A_05"
+                            {
+                                over "Shader"
+                                {
+                                    asset inputs:metallic_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_05_metallicRoughness_metal.m.rtex.dds@
+                                    custom asset inputs:normalmap_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_05_normal_OTH_Normal.n.rtex.dds@
+                                    float inputs:reflection_roughness_constant = 1
+                                    asset inputs:reflectionroughness_texture = @./assets/ssdocks/meshes/SubUSDs/textures/Bourbon_Barrel_Type_A_05_metallicRoughness_rough.r.rtex.dds@
+                                }
+                            }
+                        }
+
+                        over "Bourbon_Barrel_Type_A_05_4"
+                        {
+                            over "Object_4"
+                            {
+                                over "Object_4"
+                                {
+                                    uniform bool doubleSided = 0
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
