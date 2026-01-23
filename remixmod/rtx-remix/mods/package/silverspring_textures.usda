@@ -1404,6 +1404,15 @@ over "RootNode"
             }
         }
 
+        over "mat_00853106CC3A2D28"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/characters/corvus_wounded.a.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.85
+            }
+        }
+
         over "mat_2E58342DA5F92FEC"
         {
             over "Shader"

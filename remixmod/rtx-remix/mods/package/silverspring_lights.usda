@@ -20,7 +20,7 @@ over "RootNode"
 {
     over "meshes"
     {
-        over "mesh_4467AE3576D137BA"
+        over "mesh_735178B013643165"
         {
             def SphereLight "SphereLight" (
                 prepend apiSchemas = ["ShapingAPI"]
@@ -37,7 +37,7 @@ over "RootNode"
                 asset inputs:shaping:ies:file
                 double3 xformOp:rotateXYZ = (90, 0, 90)
                 double3 xformOp:scale = (1, 1, 1)
-                double3 xformOp:translate = (-1.7435297740730675, -0.4984207257864739, 24.420274111612443)
+                double3 xformOp:translate = (3155.323373671463, -178.13315938338806, 107.00709195267994)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
             }
 
@@ -48,7 +48,7 @@ over "RootNode"
                 float3[] extent = [(-5, -5, -0), (5, 5, 0)]
                 color3f inputs:color = (1, 0.74404675, 0)
                 float inputs:colorTemperature = 6500
-                float inputs:height = 17
+                float inputs:height = 18.304247
                 float inputs:intensity = 35
                 float inputs:shaping:cone:angle = 180
                 float inputs:shaping:cone:softness
@@ -57,8 +57,8 @@ over "RootNode"
                 asset inputs:shaping:ies:file
                 float inputs:width = 17
                 double3 xformOp:rotateXYZ = (180, 0, 90)
-                double3 xformOp:scale = (1, 1, 1)
-                double3 xformOp:translate = (0.4334451607669507, -1.6830698355281868, -9.794191112604736)
+                double3 xformOp:scale = (1.191422556485715, 1.191422556485715, 0.9999999999999991)
+                double3 xformOp:translate = (3156.837411067602, -180.26597791757266, 72.29796162063924)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
             }
         }
