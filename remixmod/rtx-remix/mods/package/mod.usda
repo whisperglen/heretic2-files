@@ -13,9 +13,9 @@
             }
         }
     }
-    endTimeCode = 0
+    endTimeCode = 40
     metersPerUnit = 1
-    startTimeCode = -2.5
+    startTimeCode = 0
     subLayers = [
         @./skyboxes.usda@,
         @./silverspring_textures.usda@,
@@ -24,7 +24,7 @@
         @./andoria_textures.usda@,
         @./andoria_lights.usda@
     ]
-    timeCodesPerSecond = 24
+    timeCodesPerSecond = 60
     upAxis = "Z"
 )
 

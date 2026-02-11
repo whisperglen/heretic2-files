@@ -254,14 +254,6 @@ over "RootNode"
             }
         }
 
-        over "mat_A5CAA24AEE32F673"
-        {
-            over "Shader"
-            {
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Rope001_1K-PNG_Roughness.r.rtex.dds@
-            }
-        }
-
         over "mat_B91758E3093E0ABC"
         {
             over "Shader"
@@ -455,8 +447,13 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/bucket_0_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/bucket_0_height.h.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/extras/bucket_0_metallic.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/bucket_0_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.75
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/bucket_0_roughness.r.rtex.dds@
             }
         }
 
@@ -477,8 +474,12 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/crate_fishing_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/crate_fishing_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/crate_fishing_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.79999995
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/crate_fishing_roughness_0.r.rtex.dds@
             }
         }
 
@@ -491,20 +492,13 @@ over "RootNode"
             }
         }
 
-        over "mat_95687135574FB69D"
-        {
-            over "Shader"
-            {
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
-            }
-        }
-
         over "mat_D9467B3A43816324"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/table.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/table_nor_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.8
             }
         }
 
@@ -512,8 +506,9 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/chair.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/chair_nor_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.8
             }
         }
 
@@ -521,8 +516,9 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/wooden_logs.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/wooden_logs_nor_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.9
             }
         }
 
@@ -530,8 +526,10 @@ over "RootNode"
         {
             over "Shader"
             {
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Wood076_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/broom_albedo.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/broom_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.8
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/broom_roughness.r.rtex.dds@
             }
         }
 
@@ -1399,8 +1397,10 @@ over "RootNode"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/characters/corvus.a.rtex.dds@
-                custom float inputs:reflection_roughness_constant = 0.85
+                asset inputs:diffuse_texture = @./assets/ingested/characters/corvus_fit.a.rtex.dds@
+                custom float inputs:metallic_constant = 0
+                custom float inputs:reflection_roughness_constant = 0.9
+                custom asset inputs:reflectionroughness_texture = @./assets/ingested/characters/corvus_fit_roughness.r.rtex.dds@
             }
         }
 
@@ -1408,8 +1408,9 @@ over "RootNode"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ingested/characters/corvus_wounded.a.rtex.dds@
-                custom float inputs:reflection_roughness_constant = 0.85
+                asset inputs:diffuse_texture = @./assets/ingested/characters/corvus_fit_wounded.a.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.9
+                custom asset inputs:reflectionroughness_texture = @./assets/ingested/characters/corvus_fit_wounded_roughness.r.rtex.dds@
             }
         }
 
@@ -1462,6 +1463,188 @@ over "RootNode"
                 custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/crate_small_l_Metalness.m.rtex.dds@
                 custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/crate_small_l_OTH_Normal.n.rtex.dds@
                 custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/crate_small_l_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_5EB957F440CB757B"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/crate_broken13_0_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/crate_broken13_0_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/crate_broken13_0_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.85
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/crate_broken13_0_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_0AC6EBD47B66EDE8"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/crate_broken24_0_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/crate_broken24_0_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/crate_broken24_0_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.85
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/crate_broken24_0_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_4D04BB64F8D8D58E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/crate_broken_33_Albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/crate_broken_33_Height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/crate_broken_33_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.84999996
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/crate_broken_33_Roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_A5CAA24AEE32F673"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/rope_pile_1_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/chain_pile_1_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/rope_pile_1_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.95
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/rope_pile_1_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_95687135574FB69D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/dock_post_1_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/dock_post_1_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/dock_post_1_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.8
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/dock_post_1_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_935244678765FE5D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/dock_post_2_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/dock_post_2_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/dock_post_2_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.8
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/dock_post_2_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_78FF98695BFB191A"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/dock_post_end_albedo.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/dock_post_end_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.79999995
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/dock_post_end_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_D8201B779EFD76D3"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/wooden_cart.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/wooden_cart_nor_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.75
+            }
+        }
+
+        over "mat_3CDAF78CCA7F9D42"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/chain_pile_1_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0
+                custom float inputs:displace_out = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/chain_pile_1_height.h.rtex.dds@
+                custom float inputs:metallic_constant = 0.75
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/chain_pile_1_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.5
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/chain_pile_1_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_0F1A11A7ADA90F51"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/window_docks1_albedo.a.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/window_docks1_normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/window_docks1_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_BD4C94143999B710"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/door_docks1_albedo.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/extras/door_docks1_metallic_0.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks1_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.75
+            }
+        }
+
+        over "mat_F65C53078E3D724F"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/door_docks2_1_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/dock_post_2_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks2_1_normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/door_docks2_1_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_CAB6F0C30BCF4F48"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/door_docks2a_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/door_docks2a_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks2a_normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/door_docks2a_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_8C04CC50662F549D"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/door_docks3_albedo.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/extras/door_docks3_metallic.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks3_normal_OTH_Normal.n.rtex.dds@
+                custom float inputs:reflection_roughness_constant = 0.75
+            }
+        }
+
+        over "mat_F045FE2E535757E4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/door_docks4_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/door_docks4_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks4_normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/door_docks4_roughness.r.rtex.dds@
             }
         }
     }
