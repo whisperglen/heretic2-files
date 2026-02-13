@@ -15,6 +15,10 @@
   - rmx_normals 3 will compute Normals for all surfaces, but this will noticeably affect fps
   - rmx_logtextures 1 will log to console all textures that are rendered (use rmx_novis 0 and r_nocull 0 to only log textures visible on-screen); this helps me to add new textures to the ini section
 
+## Want to chat or having issues?
+Join the Discord channel for the game, in the Remix Community server: <a href="https://discord.com/channels/1028444667789967381/1386667875892465816"><img src="https://img.shields.io/discord/1028444667789967381?color=7289da&logo=discord&logoColor=white" alt="RTX Remix Discord Channel" /></a>
+
+
 ##  **WARNING**
 - This was planned to be a Lazy-man's PBR attempt, to see how far ready made assets and quick texture modification could take me.
 - I have taken **a l o t** of creative liberties, I tried to use materials similar to the original, but if the color scheme hurt my eyes, I just picked some other material

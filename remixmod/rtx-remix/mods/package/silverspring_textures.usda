@@ -359,10 +359,10 @@ over "RootNode"
         {
             over "Shader"
             {
-                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_Color.a.rtex.dds@
-                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_Metalness.m.rtex.dds@
-                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_NormalGL_OTH_Normal.n.rtex.dds@
-                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/Planks019_1K-PNG_Roughness.r.rtex.dds@
+                asset inputs:diffuse_texture = @./assets/ssdocks/ingested/planks_weathered_2_BaseColor.a.rtex.dds@
+                custom asset inputs:metallic_texture = @./assets/ssdocks/ingested/planks_weathered_2_Metalness.m.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/ingested/planks_weathered_2_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/ingested/planks_weathered_2_Roughness.r.rtex.dds@
             }
         }
 
@@ -1029,12 +1029,18 @@ over "RootNode"
             }
         }
 
-        over "mat_4497AAEFC3D75A4C"
+        over "mat_4497AAEFC3D75A4C" (
+            references = @./materials/AperturePBR_Translucent.usda@</Looks/mat_AperturePBR_Translucent>
+        )
         {
             over "Shader"
             {
                 custom bool inputs:blend_enabled = 0
                 custom int inputs:blend_type = 0
+                asset inputs:diffuse_texture = @./assets/ingested/meteors.a.rtex.dds@
+                custom float inputs:ior_constant = 1
+                custom float inputs:thin_wall_thickness = 0.5
+                custom bool inputs:thin_walled = 1
             }
         }
 
@@ -1184,6 +1190,16 @@ over "RootNode"
         {
             over "Shader"
             {
+                asset inputs:diffuse_texture = @./assets/ingested/phoenix_1.a.rtex.dds@
+                custom bool inputs:use_legacy_alpha_state = 1
+            }
+        }
+
+        over "mat_8F9005D3802EE3B4"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ingested/phoenix_2.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1214,6 +1230,7 @@ over "RootNode"
             {
                 custom bool inputs:blend_enabled = 1
                 custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/sphere_2.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1224,6 +1241,7 @@ over "RootNode"
             {
                 custom bool inputs:blend_enabled = 1
                 custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/sphere_1.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1274,6 +1292,7 @@ over "RootNode"
             {
                 custom bool inputs:blend_enabled = 1
                 custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/storm_cloud.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1284,6 +1303,7 @@ over "RootNode"
             {
                 custom bool inputs:blend_enabled = 1
                 custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/storm_drop.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1294,6 +1314,7 @@ over "RootNode"
             {
                 custom bool inputs:blend_enabled = 1
                 custom int inputs:blend_type = 4
+                asset inputs:diffuse_texture = @./assets/ingested/storm_bolt.a.rtex.dds@
                 custom bool inputs:use_legacy_alpha_state = 1
             }
         }
@@ -1645,6 +1666,30 @@ over "RootNode"
                 custom asset inputs:height_texture = @./assets/ssdocks/extras/door_docks4_height.h.rtex.dds@
                 custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks4_normal_OTH_Normal.n.rtex.dds@
                 custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/door_docks4_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_3FCFDB351D4BD80E"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/sign_docks1_albedo.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/sign_docks1_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/sign_docks1_normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/sign_docks1_roughness.r.rtex.dds@
+            }
+        }
+
+        over "mat_0233FF13447BF5B9"
+        {
+            over "Shader"
+            {
+                asset inputs:diffuse_texture = @./assets/ssdocks/extras/door_docks3_margin_diffuse.a.rtex.dds@
+                custom float inputs:displace_in = 0.01
+                custom asset inputs:height_texture = @./assets/ssdocks/extras/door_docks3_margin_height.h.rtex.dds@
+                custom asset inputs:normalmap_texture = @./assets/ssdocks/extras/door_docks3_margin_normal_OTH_Normal.n.rtex.dds@
+                custom asset inputs:reflectionroughness_texture = @./assets/ssdocks/extras/door_docks3_margin_roughness.r.rtex.dds@
             }
         }
     }
@@ -2103,6 +2148,19 @@ over "RootNode"
                     float3 xformOp:scale = (1, 1, 1)
                     double3 xformOp:translate = (-1301.83456734492, -1040.9096079365554, -11.087639621936816)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+
+                    over "mesh_B39C50BA9B6B98A6"
+                    {
+                        over "CylinderLight"
+                        {
+                            float inputs:intensity = 100
+                            float inputs:radius = 4
+                            double3 xformOp:rotateXYZ = (0, -90, 0)
+                            double3 xformOp:scale = (0.4197230742803236, 1.2, 1.2)
+                            double3 xformOp:translate = (2.23162648849825, -0.15019491967564136, 18.320572689485417)
+                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+                        }
+                    }
                 }
             }
         }
@@ -2572,30 +2630,6 @@ over "RootNode"
                     float3 xformOp:scale = (1, 1, 1)
                     double3 xformOp:translate = (2867.525701319637, -1400, 80)
                     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
-                }
-            }
-        }
-    }
-
-    over "instances"
-    {
-        over "inst_1CAC4AAC90F3E4EE_0"
-        {
-            over "ref_78f5c227ea704e169696be9af4008cc7"
-            {
-                over "XForms"
-                {
-                    over "mesh_B39C50BA9B6B98A6"
-                    {
-                        over "CylinderLight"
-                        {
-                            float inputs:radius = 4
-                            double3 xformOp:rotateXYZ = (0, -90, 0)
-                            double3 xformOp:scale = (1, 1, 1)
-                            double3 xformOp:translate = (2.2316264884618704, -0.1501949196770056, 21.189103282998673)
-                            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
-                        }
-                    }
                 }
             }
         }

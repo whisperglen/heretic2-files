@@ -138,7 +138,7 @@ def Xform "ReferenceTarget" (
             {
                 float3[] extent = [(-5, -5, -5), (5, 5, 5)]
                 color3f inputs:color = (0.36679536, 0.37663484, 1)
-                float inputs:intensity = 20
+                float inputs:intensity = 30
                 float inputs:length = 20
                 float inputs:radius = 6
                 float inputs:shaping:cone:angle = 180
